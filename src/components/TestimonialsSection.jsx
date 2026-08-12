@@ -3,64 +3,44 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 const TESTIMONIALS = [
   {
     id: 't1',
-    name: 'Sarah Jenkins',
-    role: 'VP of Finance',
-    company: 'Global Logistics Corp',
-    avatarInitials: 'SJ',
+    name: 'David Fang',
+    role: 'Finance Director & Assistant Company Secretary',
+    company: 'Immutep GmbH',
+    avatarInitials: 'DF',
     avatarGradient: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
     rating: 5,
-    quote: 'Gooner Technology completely transformed our forecasting cycle. What used to take three weeks now happens in real-time. Their financial architecture expertise is truly unmatched.',
+    quote: 'Gooner Technologies delivered an excellent NSPB implementation experience. The team understood our requirements, provided proactive guidance and comprehensive training, and went beyond the technical implementation to optimize our processes. Their support has helped us improve efficiency and make smarter decisions.',
   },
   {
     id: 't2',
-    name: 'David Chen',
-    role: 'Chief Financial Officer',
-    company: 'Apex Healthcare Solutions',
-    avatarInitials: 'DC',
+    name: 'Mark Fox',
+    role: 'Finance Director',
+    company: 'Quell Therapeutics Ltd',
+    avatarInitials: 'MF',
     avatarGradient: 'linear-gradient(135deg, #0284c7, #0369a1)',
     rating: 5,
-    quote: 'The transition to a unified EPM system was seamless. Our executive team now has crystal-clear visibility into unit economics, allowing us to pivot faster than ever before.',
+    quote: 'The Walpole Partnership team quickly understood our requirements and delivered a rolling forecasting and reporting solution tailored to our business. Their flexibility, responsiveness, and clear communication made the implementation a very positive experience.',
   },
   {
     id: 't3',
-    name: 'Marcus Thorne',
-    role: 'Director of FP&A',
-    company: 'Nexus FinServ',
-    avatarInitials: 'MT',
+    name: 'Leif Hansen',
+    role: 'Manager Controlling',
+    company: 'ANE GmbH & Co. KG',
+    avatarInitials: 'LH',
     avatarGradient: 'linear-gradient(135deg, #3b82f6, #1e40af)',
     rating: 5,
-    quote: 'By automating our data pipelines and implementing AI-driven insights, Gooner Technology gave my team their time back. We spend less time reconciling and more time strategizing.',
+    quote: 'Walpole Partnership quickly understood our business and successfully implemented our complex revenue planning requirements. The team was highly responsive, solved issues quickly, and delivered a standardized planning process with strong NetSuite integration.',
   },
   {
     id: 't4',
-    name: 'Emily Rostova',
-    role: 'Head of Enterprise Analytics',
-    company: 'FinTech Dynamics',
-    avatarInitials: 'ER',
+    name: 'Finance Leader',
+    role: 'Enterprise User',
+    company: 'NSPB Customer',
+    avatarInitials: 'NC',
     avatarGradient: 'linear-gradient(135deg, #4f46e5, #3730a3)',
     rating: 5,
-    quote: 'Deploying Gooner Technology’s AI models allowed us to uncover hidden revenue streams. It’s not just a tool; it’s a competitive advantage.',
-  },
-  {
-    id: 't5',
-    name: 'James Lipton',
-    role: 'SVP of Strategy',
-    company: 'Vanguard Retail Group',
-    avatarInitials: 'JL',
-    avatarGradient: 'linear-gradient(135deg, #0d9488, #0f766e)',
-    rating: 5,
-    quote: 'Their deep understanding of enterprise architecture meant we were up and running in record time. The ROI was evident within the first quarter.',
-  },
-  {
-    id: 't6',
-    name: 'Aisha Patel',
-    role: 'Chief Data Officer',
-    company: 'Quantum Banking Partners',
-    avatarInitials: 'AP',
-    avatarGradient: 'linear-gradient(135deg, #7c3aed, #5b21b6)',
-    rating: 5,
-    quote: 'The data governance and reporting accuracy we achieved with Gooner Technology exceeded all our regulatory expectations. Absolutely phenomenal.',
-  },
+    quote: 'Gooner Technologies provided a hands-on and highly responsive NSPB implementation. Their clear communication, flexibility, and proactive guidance ensured a smooth delivery, while the training and process improvements helped us maximize the value of the solution.',
+  }
 ];
 
 const TRUST_STATS = [
@@ -129,7 +109,7 @@ export default function TestimonialsSection() {
   };
 
   const renderCardGroup = (groupIndex) => {
-    const groupData = groupIndex === 0 ? TESTIMONIALS.slice(0, 3) : TESTIMONIALS.slice(3, 6);
+    const groupData = groupIndex === 0 ? TESTIMONIALS.slice(0, 2) : TESTIMONIALS.slice(2, 4);
     return (
       <div className="testi-grid">
         {groupData.map((item) => (
