@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import goonerLogo from '../assets/logo.png';
 
 export default function Navbar({ links }) {
@@ -6,10 +7,10 @@ export default function Navbar({ links }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const defaultLinks = [
-    { label: 'Solutions', href: '#solutions' },
-    { label: 'Why Us', href: '#why-us' },
-    { label: 'Success Stories', href: '#success-story' },
-    { label: 'Contact Us', href: '#contact-us', isButton: true },
+    { label: 'Product', href: '/product' },
+    { label: 'Services', href: '/services' },
+    { label: 'About Us', href: '/about-us' },
+    { label: 'Contact Us', href: '/#contact-us', isButton: true },
   ];
 
   const navItems = links || defaultLinks;
@@ -23,13 +24,23 @@ export default function Navbar({ links }) {
     return () => window.removeEventListener('scroll', handleScrollState);
   }, []);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const handleNavClick = (e, href) => {
     setMobileMenuOpen(false);
-    if (href.startsWith('#')) {
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (href.startsWith('/#')) {
+      e.preventDefault();
+      const id = href.replace('/#', '#');
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const target = document.querySelector(id);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      } else {
+        const target = document.querySelector(id);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   };
@@ -38,8 +49,7 @@ export default function Navbar({ links }) {
     <>
       <header className={`navbar-header ${isScrolled ? 'is-scrolled' : ''}`}>
         <nav className="navbar" aria-label="Main Navigation">
-          {/* Brand Logo */}
-          <a href="#" className="brand" onClick={(e) => handleNavClick(e, '#hero')}>
+          <Link to="/" className="brand" onClick={() => setMobileMenuOpen(false)}>
             <img
               src={goonerLogo}
               alt="Gooner Technology Logo"
@@ -47,29 +57,29 @@ export default function Navbar({ links }) {
             />
             <span className="brand__divider" aria-hidden="true" />
             <span className="brand__name">Gooner Technology</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <ul className="hero-links">
             {navItems.map((item) => (
               <li key={item.label} className="hero-links__item">
                 {item.isButton ? (
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="nav-btn-contact"
                     onClick={(e) => handleNavClick(e, item.href)}
                   >
                     <span>{item.label}</span>
                     <span className="nav-btn-arrow" aria-hidden="true">→</span>
-                  </a>
+                  </Link>
                 ) : (
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="nav-link-standard"
                     onClick={(e) => handleNavClick(e, item.href)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 )}
               </li>
             ))}
@@ -101,10 +111,10 @@ export default function Navbar({ links }) {
         aria-label="Mobile Navigation"
       >
         <div className="mobile-drawer__header">
-          <a href="#" className="brand" onClick={(e) => handleNavClick(e, '#hero')}>
+          <Link to="/" className="brand" onClick={() => setMobileMenuOpen(false)}>
             <img src={goonerLogo} alt="Gooner Technology" className="brand__logo-img" />
             <span className="brand__name">Gooner Technology</span>
-          </a>
+          </Link>
           <button
             type="button"
             className="mobile-drawer__close"
@@ -118,14 +128,14 @@ export default function Navbar({ links }) {
         <ul className="mobile-drawer__list">
           {navItems.map((item) => (
             <li key={item.label} className="mobile-drawer__item">
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className={`mobile-drawer__link ${item.isButton ? 'mobile-drawer__link--btn' : ''}`}
                 onClick={(e) => handleNavClick(e, item.href)}
               >
                 <span>{item.label}</span>
                 {item.isButton && <span aria-hidden="true">→</span>}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
