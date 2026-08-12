@@ -191,7 +191,6 @@ export default function TestimonialsSection() {
           
           <div className="testi-header">
             <div className="testi-eyebrow">
-              <span className="testi-eyebrow__dot" />
               <span>CLIENT TESTIMONIALS</span>
             </div>
             <h2 className="testi-title">Trusted by Finance Leaders</h2>
