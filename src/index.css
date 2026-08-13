@@ -6253,7 +6253,7 @@ body {
   display: flex;
   min-height: 520px;
   background-size: cover;
-  background-position: right bottom;
+  background-position: right 30%;
   background-repeat: no-repeat;
   padding: 130px 0 40px;
   position: relative;
