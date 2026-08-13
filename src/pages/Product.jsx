@@ -183,66 +183,7 @@ export default function Product() {
     }
   ];
 
-  const ourProducts = [
-    {
-      title: 'AI Finance Agent',
-      color: '#3b82f6',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="11" width="18" height="10" rx="2"/>
-          <circle cx="12" cy="5" r="2"/>
-          <path d="M12 7v4M8 15h.01M16 15h.01M2 16h1M21 16h1"/>
-        </svg>
-      ),
-      desc: 'AI-powered assistant that analyzes financial data, explains variances and delivers actionable insights.'
-    },
-    {
-      title: 'Intelligent P2P Automation',
-      color: '#0c4cb0',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <circle cx="10" cy="15" r="2"/>
-          <path d="M16 15h-2"/>
-        </svg>
-      ),
-      desc: 'Automate procure-to-pay from invoice capture to payment with intelligent matching and approvals.'
-    },
-    {
-      title: 'FP&A Intelligence',
-      color: '#6366f1',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-          <line x1="9" y1="17" x2="9" y2="10"/>
-          <line x1="15" y1="17" x2="15" y2="7"/>
-        </svg>
-      ),
-      desc: 'Real-time FP&A insights with variance analysis, scenario modeling and performance tracking.'
-    },
-    {
-      title: 'Intelligent Forecasting',
-      color: '#f97316',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="m19 20-4-4-4 4-5-5-2 2M12 4h9v9M21 4l-10 10"/>
-        </svg>
-      ),
-      desc: 'Driver-based forecasting that adapts to change and helps you plan with confidence.'
-    },
-    {
-      title: 'Finance Automation Platform',
-      color: '#10b981',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-        </svg>
-      ),
-      desc: 'Automate finance processes and workflows across systems with intelligence.'
-    }
-  ];
+
 
   return (
     <main className="app-container">
@@ -308,26 +249,7 @@ export default function Product() {
             </div>
           </div>
 
-          {/* Right Block: Our Products */}
-          <div className="compare-card compare-card--products">
-            <div className="compare-card__header">
-              OUR PRODUCTS
-            </div>
-            <div className="compare-card__body compare-card__body--products">
-              {ourProducts.map((col) => (
-                <div key={col.title} className="product-col">
-                  <div className="product-col__icon-wrap" style={{ color: col.color }}>
-                    {col.icon}
-                  </div>
-                  <h3 className="product-col__title">{col.title}</h3>
-                  <p className="product-col__desc">{col.desc}</p>
-                  <a href="/#contact-us" className="product-col__link" style={{ color: col.color }}>
-                    Learn more &rarr;
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
+
 
         </div>
       </section>
