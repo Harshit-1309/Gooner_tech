@@ -234,7 +234,7 @@ export default function ImplementationServices() {
         <div className="impl-hero__container">
           <div className="impl-hero__left">
             <div className="impl-hero__eyebrow-wrap">
-              <span className="impl-hero__eyebrow">02 IMPLEMENTATION SERVICES</span>
+              <span className="impl-hero__eyebrow">IMPLEMENTATION SERVICES</span>
               <div className="impl-hero__eyebrow-line" />
             </div>
             <h1 className="impl-hero__title">
