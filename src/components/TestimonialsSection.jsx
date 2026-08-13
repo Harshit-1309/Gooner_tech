@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useCallback, useRef } from 'react';
 
 const TESTIMONIALS = [
   {
@@ -19,7 +19,7 @@ const TESTIMONIALS = [
     avatarInitials: 'MF',
     avatarGradient: 'linear-gradient(135deg, #0284c7, #0369a1)',
     rating: 5,
-    quote: 'The Walpole Partnership team quickly understood our requirements and delivered a rolling forecasting and reporting solution tailored to our business. Their flexibility, responsiveness, and clear communication made the implementation a very positive experience.',
+    quote: 'The team quickly understood our requirements and delivered a rolling forecasting and reporting solution tailored to our business. Their flexibility, responsiveness, and clear communication made the implementation a very positive experience.',
   },
   {
     id: 't3',
@@ -29,67 +29,21 @@ const TESTIMONIALS = [
     avatarInitials: 'LH',
     avatarGradient: 'linear-gradient(135deg, #3b82f6, #1e40af)',
     rating: 5,
-    quote: 'Walpole Partnership quickly understood our business and successfully implemented our complex revenue planning requirements. The team was highly responsive, solved issues quickly, and delivered a standardized planning process with strong NetSuite integration.',
-  },
-  {
-    id: 't4',
-    name: 'Finance Leader',
-    role: 'Enterprise User',
-    company: 'NSPB Customer',
-    avatarInitials: 'NC',
-    avatarGradient: 'linear-gradient(135deg, #4f46e5, #3730a3)',
-    rating: 5,
-    quote: 'Gooner Technologies provided a hands-on and highly responsive NSPB implementation. Their clear communication, flexibility, and proactive guidance ensured a smooth delivery, while the training and process improvements helped us maximize the value of the solution.',
+    quote: 'The team quickly understood our business and successfully implemented our complex revenue planning requirements. The team was highly responsive, solved issues quickly, and delivered a standardized planning process with strong NetSuite integration.',
   }
 ];
 
-const TRUST_STATS = [
-  {
-    value: '98%',
-    label: 'Client Satisfaction',
-    desc: 'Independently audited enterprise partner feedback',
-  },
-  {
-    value: '60+',
-    label: 'Projects Delivered',
-    desc: 'Across North America, UK, EMEA & APAC',
-  },
-  {
-    value: '100%',
-    label: 'Repeat & Retained Clients',
-    desc: 'Long-term advisory, optimization & managed hypercare',
-  },
-];
-
 export default function TestimonialsSection() {
-  const [rotateY, setRotateY] = useState(0);
-  const [cubeWidth, setCubeWidth] = useState(1200);
-  const containerRef = useRef(null);
+  const scrollRef = useRef(null);
 
-  // Measure width for perfectly square 3D faces
-  useEffect(() => {
-    const handleResize = () => {
-      if (containerRef.current) {
-        setCubeWidth(containerRef.current.offsetWidth);
-      }
-    };
-    handleResize(); // initial measure
-    
-    // Add small delay on mount for font rendering stability
-    setTimeout(handleResize, 100);
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Auto-rotate every 3 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setRotateY((prev) => prev - 90);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, []);
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const { clientWidth } = scrollRef.current;
+      // Scroll by 1 card width roughly, or full container width
+      const scrollAmount = direction === 'left' ? -(clientWidth / 2) : (clientWidth / 2);
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   const handleCardMouseMove = useCallback((e) => {
     const card = e.currentTarget;
@@ -99,63 +53,6 @@ export default function TestimonialsSection() {
     card.style.setProperty('--mouse-x', `${x}px`);
     card.style.setProperty('--mouse-y', `${y}px`);
   }, []);
-
-  // Determine active group (0 or 1) based on current rotation
-  const activeGroup = (Math.abs(rotateY / 90) % 2) === 0 ? 0 : 1;
-
-  const handleDotClick = (groupIndex) => {
-    if (activeGroup === groupIndex) return;
-    setRotateY((prev) => prev - 90);
-  };
-
-  const renderCardGroup = (groupIndex) => {
-    const groupData = groupIndex === 0 ? TESTIMONIALS.slice(0, 2) : TESTIMONIALS.slice(2, 4);
-    return (
-      <div className="testi-grid">
-        {groupData.map((item) => (
-          <div
-            key={item.id}
-            className="testi-card"
-            onMouseMove={handleCardMouseMove}
-          >
-            <div className="testi-card__spotlight" aria-hidden="true" />
-            <div className="testi-card__top-beam" aria-hidden="true" />
-
-            <div className="testi-card__header">
-              <div className="testi-stars" aria-label="5 out of 5 stars">
-                {[...Array(item.rating)].map((_, i) => (
-                  <svg key={i} className="testi-star" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <div className="testi-quote-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-              </div>
-            </div>
-
-            <div className="testi-card__body">
-              <p className="testi-quote-text">&ldquo;{item.quote}&rdquo;</p>
-            </div>
-
-            <div className="testi-card__footer">
-              <div className="testi-avatar" style={{ background: item.avatarGradient }}>
-                <span>{item.avatarInitials}</span>
-                <span className="testi-avatar-badge" title="Verified Enterprise Client">✓</span>
-              </div>
-              <div className="testi-profile-info">
-                <h4 className="testi-client-name">{item.name}</h4>
-                <p className="testi-client-role">{item.role}</p>
-                <p className="testi-client-company">{item.company}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  };
 
   return (
     <section
@@ -167,8 +64,7 @@ export default function TestimonialsSection() {
         <div className="testi-ambient-glow testi-ambient-glow--top" aria-hidden="true" />
         <div className="testi-ambient-glow testi-ambient-glow--bottom" aria-hidden="true" />
 
-        <div className="testi-container" ref={containerRef} style={{ '--cube-width': `${cubeWidth}px` }}>
-          
+        <div className="testi-container">
           <div className="testi-header">
             <div className="testi-eyebrow">
               <span>CLIENT TESTIMONIALS</span>
@@ -179,45 +75,71 @@ export default function TestimonialsSection() {
             </p>
           </div>
 
-          {/* 3D Cube Carousel */}
-          <div className="cube-scene">
-            <div 
-              className="cube-container" 
-              style={{ transform: `translateZ(calc(var(--cube-width) * -0.5)) rotateY(${rotateY}deg)` }}
+          <div className="carousel-wrapper">
+            <button 
+              onClick={() => scroll('left')} 
+              className="carousel-btn left-btn"
+              aria-label="Previous testimonial"
             >
-              <div className="cube-face cube-face-front">
-                {renderCardGroup(0)}
-              </div>
-              <div className="cube-face cube-face-right">
-                {renderCardGroup(1)}
-              </div>
-              <div className="cube-face cube-face-back">
-                {renderCardGroup(0)}
-              </div>
-              <div className="cube-face cube-face-left">
-                {renderCardGroup(1)}
-              </div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+
+            <div className="testi-grid" ref={scrollRef}>
+              {TESTIMONIALS.map((item) => (
+                <div
+                  key={item.id}
+                  className="testi-card"
+                  onMouseMove={handleCardMouseMove}
+                >
+                  <div className="testi-card__spotlight" aria-hidden="true" />
+                  <div className="testi-card__top-beam" aria-hidden="true" />
+
+                  <div className="testi-card__header">
+                    <div className="testi-stars" aria-label="5 out of 5 stars">
+                      {[...Array(item.rating)].map((_, i) => (
+                        <svg key={i} className="testi-star" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <div className="testi-quote-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="testi-card__body">
+                    <p className="testi-quote-text">&ldquo;{item.quote}&rdquo;</p>
+                  </div>
+
+                  <div className="testi-card__footer">
+                    <div className="testi-avatar" style={{ background: item.avatarGradient }}>
+                      <span>{item.avatarInitials}</span>
+                      <span className="testi-avatar-badge" title="Verified Enterprise Client">✓</span>
+                    </div>
+                    <div className="testi-profile-info">
+                      <h4 className="testi-client-name">{item.name}</h4>
+                      <p className="testi-client-role">{item.role}</p>
+                      <p className="testi-client-company">{item.company}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
+
+            <button 
+              onClick={() => scroll('right')} 
+              className="carousel-btn right-btn"
+              aria-label="Next testimonial"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
           </div>
-
-          <div className="testi-pagination" role="tablist">
-            <button
-              role="tab"
-              aria-selected={activeGroup === 0}
-              aria-label="Group 1"
-              className={`testi-dot ${activeGroup === 0 ? 'is-active' : ''}`}
-              onClick={() => handleDotClick(0)}
-            />
-            <button
-              role="tab"
-              aria-selected={activeGroup === 1}
-              aria-label="Group 2"
-              className={`testi-dot ${activeGroup === 1 ? 'is-active' : ''}`}
-              onClick={() => handleDotClick(1)}
-            />
-          </div>
-
-
         </div>
       </div>
     </section>

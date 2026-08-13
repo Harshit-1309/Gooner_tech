@@ -771,7 +771,8 @@ img[alt="White Stores Logo"] {
 }
 
 .why-divider__center-node,
-.story-eyebrow {
+.story-eyebrow,
+.testi-eyebrow {
   color: var(--blue-primary) !important;
   background: rgba(56, 142, 255, 0.1) !important;
   border-color: rgba(56, 142, 255, 0.28) !important;
