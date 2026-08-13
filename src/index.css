@@ -6990,7 +6990,8 @@ body {
 .impl-hero {
   display: flex;
   min-height: 520px;
-  background-size: cover;
+  background-color: #e6effa;
+  background-size: contain;
   background-position: right bottom;
   background-repeat: no-repeat;
   padding: 130px 0 40px;
