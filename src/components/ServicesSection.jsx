@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SERVICES = [
   {
@@ -103,36 +104,76 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className={`services-grid ${isVisible ? 'is-visible' : ''}`}>
-          {SERVICES.map((srv, idx) => (
-            <div
-              key={srv.step}
-              className="service-card"
-              style={{ animationDelay: `${idx * 100}ms` }}
-            >
-              <div className="service-card__glow" aria-hidden="true" />
+        {/* Consulting Services Subsection */}
+        <div id="consulting-services" className="services__group" style={{ scrollMarginTop: '120px', marginBottom: '80px' }}>
+          <h3 className="services__group-title">Consulting Services</h3>
+          <div className={`services-grid consulting-services-grid ${isVisible ? 'is-visible' : ''}`}>
+            {SERVICES.slice(0, 3).map((srv, idx) => (
+              <Link
+                to="/services/consulting"
+                key={srv.step}
+                className="service-card"
+                style={{ animationDelay: `${idx * 100}ms`, textDecoration: 'none' }}
+              >
+                <div className="service-card__glow" aria-hidden="true" />
 
-              <div className="service-card__top">
-                <div className="service-card__icon-wrap">{srv.icon}</div>
-                <span className="service-card__step">{srv.step}</span>
-              </div>
+                <div className="service-card__top">
+                  <div className="service-card__icon-wrap">{srv.icon}</div>
+                  <span className="service-card__step">{srv.step}</span>
+                </div>
 
-              <div className="service-card__body">
-                <h3 className="service-card__title">{srv.title}</h3>
-                <p className="service-card__subtitle">{srv.subtitle}</p>
-                <p className="service-card__desc">{srv.description}</p>
-              </div>
+                <div className="service-card__body">
+                  <h3 className="service-card__title">{srv.title}</h3>
+                  <p className="service-card__subtitle">{srv.subtitle}</p>
+                  <p className="service-card__desc">{srv.description}</p>
+                </div>
 
-              <div className="service-card__tags">
-                {srv.tags.map((tag) => (
-                  <span key={tag} className="service-card__tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+                <div className="service-card__tags">
+                  {srv.tags.map((tag) => (
+                    <span key={tag} className="service-card__tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Managed Services Subsection */}
+        <div id="managed-services" className="services__group" style={{ scrollMarginTop: '120px' }}>
+          <h3 className="services__group-title">Managed Services</h3>
+          <div className={`services-grid managed-services-grid ${isVisible ? 'is-visible' : ''}`}>
+            {SERVICES.slice(3, 4).map((srv, idx) => (
+              <Link
+                to="/services/managed"
+                key={srv.step}
+                className="service-card"
+                style={{ animationDelay: `${(idx + 3) * 100}ms`, textDecoration: 'none' }}
+              >
+                <div className="service-card__glow" aria-hidden="true" />
+
+                <div className="service-card__top">
+                  <div className="service-card__icon-wrap">{srv.icon}</div>
+                  <span className="service-card__step">{srv.step}</span>
+                </div>
+
+                <div className="service-card__body">
+                  <h3 className="service-card__title">{srv.title}</h3>
+                  <p className="service-card__subtitle">{srv.subtitle}</p>
+                  <p className="service-card__desc">{srv.description}</p>
+                </div>
+
+                <div className="service-card__tags">
+                  {srv.tags.map((tag) => (
+                    <span key={tag} className="service-card__tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

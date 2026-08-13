@@ -8,7 +8,14 @@ export default function Navbar({ links }) {
 
   const defaultLinks = [
     { label: 'Product', href: '/product' },
-    { label: 'Services', href: '/services' },
+    { 
+      label: 'Services', 
+      href: '/services/consulting',
+      dropdown: [
+        { label: 'Consulting Services', href: '/services/consulting' },
+        { label: 'Managed Services', href: '/services/managed' }
+      ]
+    },
     { label: 'About Us', href: '/about-us' },
     { label: 'Contact Us', href: '/#contact-us', isButton: true },
   ];
@@ -29,18 +36,27 @@ export default function Navbar({ links }) {
 
   const handleNavClick = (e, href) => {
     setMobileMenuOpen(false);
-    if (href.startsWith('/#')) {
+    if (href.includes('#')) {
       e.preventDefault();
-      const id = href.replace('/#', '#');
-      if (location.pathname !== '/') {
-        navigate('/');
-        setTimeout(() => {
-          const target = document.querySelector(id);
-          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+      const [path, hash] = href.split('#');
+      const targetId = `#${hash}`;
+
+      const scrollToTarget = () => {
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+      const isSamePath = location.pathname === path || 
+        (path === '/' && location.pathname === '') ||
+        (path === '' && location.pathname === '/');
+
+      if (!isSamePath) {
+        navigate(path);
+        setTimeout(scrollToTarget, 150);
       } else {
-        const target = document.querySelector(id);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        scrollToTarget();
       }
     }
   };
@@ -62,7 +78,7 @@ export default function Navbar({ links }) {
           {/* Desktop Navigation Links */}
           <ul className="hero-links">
             {navItems.map((item) => (
-              <li key={item.label} className="hero-links__item">
+              <li key={item.label} className={`hero-links__item ${item.dropdown ? 'nav-dropdown-parent' : ''}`}>
                 {item.isButton ? (
                   <Link
                     to={item.href}
@@ -72,6 +88,30 @@ export default function Navbar({ links }) {
                     <span>{item.label}</span>
                     <span className="nav-btn-arrow" aria-hidden="true">→</span>
                   </Link>
+                ) : item.dropdown ? (
+                  <>
+                    <Link
+                      to={item.href}
+                      className="nav-link-standard nav-dropdown-trigger"
+                      onClick={(e) => handleNavClick(e, item.href)}
+                    >
+                      <span>{item.label}</span>
+                      <span className="dropdown-arrow-icon" aria-hidden="true">▼</span>
+                    </Link>
+                    <ul className="nav-dropdown-menu">
+                      {item.dropdown.map((subItem) => (
+                        <li key={subItem.label} className="nav-dropdown-item-wrap">
+                          <Link
+                            to={subItem.href}
+                            className="nav-dropdown-link"
+                            onClick={(e) => handleNavClick(e, subItem.href)}
+                          >
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
                 ) : (
                   <Link
                     to={item.href}
@@ -128,14 +168,39 @@ export default function Navbar({ links }) {
         <ul className="mobile-drawer__list">
           {navItems.map((item) => (
             <li key={item.label} className="mobile-drawer__item">
-              <Link
-                to={item.href}
-                className={`mobile-drawer__link ${item.isButton ? 'mobile-drawer__link--btn' : ''}`}
-                onClick={(e) => handleNavClick(e, item.href)}
-              >
-                <span>{item.label}</span>
-                {item.isButton && <span aria-hidden="true">→</span>}
-              </Link>
+              {item.dropdown ? (
+                <div className="mobile-drawer__dropdown-group">
+                  <Link
+                    to={item.href}
+                    className="mobile-drawer__link"
+                    onClick={(e) => handleNavClick(e, item.href)}
+                  >
+                    {item.label}
+                  </Link>
+                  <ul className="mobile-drawer__sublist">
+                    {item.dropdown.map((subItem) => (
+                      <li key={subItem.label} className="mobile-drawer__subitem">
+                        <Link
+                          to={subItem.href}
+                          className="mobile-drawer__sublink"
+                          onClick={(e) => handleNavClick(e, subItem.href)}
+                        >
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`mobile-drawer__link ${item.isButton ? 'mobile-drawer__link--btn' : ''}`}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                >
+                  <span>{item.label}</span>
+                  {item.isButton && <span aria-hidden="true">→</span>}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
