@@ -6433,26 +6433,20 @@ body {
 
 .compare-card__body--expertise {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
 }
 
 .expertise-col {
   display: flex;
   flex-direction: column;
   border-right: 1px solid #f1f5f9;
-  padding-right: 16px;
+  padding-right: 12px;
 }
 
-.expertise-col:nth-child(3n) {
+.expertise-col:last-child {
   border-right: none;
   padding-right: 0;
-}
-
-.expertise-col:nth-child(n+4) {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #f1f5f9;
 }
 
 .expertise-col__icon-wrap {
