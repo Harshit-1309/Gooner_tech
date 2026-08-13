@@ -8,45 +8,7 @@ export default function Product() {
     window.scrollTo(0, 0);
   }, []);
 
-  const pills = [
-    {
-      label: 'Account Reconciliations',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="m9 12 2 2 4-4"/>
-        </svg>
-      )
-    },
-    {
-      label: 'Profitability & Cost Management',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21.21 15.89A10 10 0 1 1 8 2.83M22 12A10 10 0 0 0 12 2v10z"/>
-        </svg>
-      )
-    },
-    {
-      label: 'BI & Analytics',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="18" y1="20" x2="18" y2="10"/>
-          <line x1="12" y1="20" x2="12" y2="4"/>
-          <line x1="6" y1="20" x2="6" y2="14"/>
-        </svg>
-      )
-    },
-    {
-      label: 'AI & Automation',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
-          <rect x="9" y="9" width="6" height="6"/>
-          <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
-        </svg>
-      )
-    }
-  ];
+
 
   const techExpertise = [
     {
@@ -192,15 +154,7 @@ export default function Product() {
             <div className="prod-hero__spacer" />
           </div>
 
-          {/* Sub-hero Pills */}
-          <div className="prod-hero__pills">
-            {pills.map((pill) => (
-              <div key={pill.label} className="prod-hero-pill">
-                <div className="prod-hero-pill__icon">{pill.icon}</div>
-                <span className="prod-hero-pill__text">{pill.label}</span>
-              </div>
-            ))}
-          </div>
+
         </div>
       </section>
 
