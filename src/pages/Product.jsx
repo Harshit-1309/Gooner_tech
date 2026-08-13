@@ -10,22 +10,6 @@ export default function Product() {
 
   const pills = [
     {
-      label: 'Planning & Budgeting',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M17.5 19A3.5 3.5 0 0 0 21 15.5c0-2.79-2.54-4.5-5-4.5-.42-1.89-1.78-3.5-3.5-3.5a5.5 5.5 0 0 0-5.5 5.5c-1.39 0-3 1.11-3 3A3.5 3.5 0 0 0 7.5 19z" />
-        </svg>
-      )
-    },
-    {
-      label: 'Financial Consolidation & Close',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 21h18M3 10h18M5 10v11M19 10v11M12 10v11M4 6l8-4 8 4M9 10v11M15 10v11"/>
-        </svg>
-      )
-    },
-    {
       label: 'Account Reconciliations',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
