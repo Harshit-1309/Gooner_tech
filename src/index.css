@@ -6252,8 +6252,9 @@ body {
 .prod-hero {
   display: flex;
   min-height: 520px;
-  background-size: cover;
-  background-position: right 30%;
+  background-color: #e2eafa;
+  background-size: contain;
+  background-position: right bottom;
   background-repeat: no-repeat;
   padding: 130px 0 40px;
   position: relative;
@@ -6899,6 +6900,33 @@ body {
   }
   .prod-hero__img-wrap {
     height: 420px;
+  }
+}
+
+@media (max-width: 991px) {
+  .prod-hero {
+    background-size: cover;
+    background-position: right center;
+  }
+  .prod-hero__left {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 30px 6%;
+    background: rgba(226, 234, 250, 0.85);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    margin: 0 4%;
+  }
+  .prod-hero__top-row {
+    flex-direction: column;
+  }
+  .prod-hero__spacer {
+    display: none;
+  }
+  .prod-hero__pills {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
   }
 }
 
