@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import productHero from '../assets/product_hero.png';
+import productHeroBg from '../assets/product_hero_bg.png';
 
 export default function Product() {
   useEffect(() => {
@@ -251,33 +251,30 @@ export default function Product() {
       </div>
 
       {/* Hero Section */}
-      <section className="prod-hero">
+      <section className="prod-hero" style={{ backgroundImage: `url(${productHeroBg})` }}>
         <div className="prod-hero__container">
-          <div className="prod-hero__left">
-            <h1 className="prod-hero__title">
-              Technology Expertise. <br />
-              Intelligent Solutions. <span className="prod-hero__title-blue">Stronger Finance.</span>
-            </h1>
-            <div className="prod-hero__title-line" />
-            <p className="prod-hero__desc">
-              We help organizations leverage leading finance technologies to plan better, close faster, improve control and drive smarter decisions.
-            </p>
-
-            {/* Sub-hero Pills */}
-            <div className="prod-hero__pills">
-              {pills.map((pill) => (
-                <div key={pill.label} className="prod-hero-pill">
-                  <div className="prod-hero-pill__icon">{pill.icon}</div>
-                  <span className="prod-hero-pill__text">{pill.label}</span>
-                </div>
-              ))}
+          <div className="prod-hero__top-row">
+            <div className="prod-hero__left">
+              <h1 className="prod-hero__title">
+                Technology Expertise. <br />
+                Intelligent Solutions. <span className="prod-hero__title-blue">Stronger Finance.</span>
+              </h1>
+              <div className="prod-hero__title-line" />
+              <p className="prod-hero__desc">
+                We help organizations leverage leading finance technologies to plan better, close faster, improve control and drive smarter decisions.
+              </p>
             </div>
+            <div className="prod-hero__spacer" />
           </div>
 
-          <div className="prod-hero__right">
-            <div className="prod-hero__img-wrap">
-              <img src={productHero} alt="Financial Technology Expert" className="prod-hero__img" />
-            </div>
+          {/* Sub-hero Pills */}
+          <div className="prod-hero__pills">
+            {pills.map((pill) => (
+              <div key={pill.label} className="prod-hero-pill">
+                <div className="prod-hero-pill__icon">{pill.icon}</div>
+                <span className="prod-hero-pill__text">{pill.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
