@@ -58,60 +58,33 @@ const PAIRS_DATA = [
   {
     id: 2,
     challenge: {
-      tag: 'Manual Process',
-      title: 'Manual Invoice & AP Processing',
-      description: 'Slow approval routing and repetitive manual entry delay vendor payments and inflate administrative costs.',
+      tag: 'Compliance',
+      title: 'Complex Month-End Close',
+      description: 'Manual journal entries, account reconciliations, intercompany eliminations, and currency conversions delay month-end signoffs',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-          <polyline points="14 2 14 8 20 8" />
-          <line x1="16" y1="13" x2="8" y2="13" />
-          <line x1="16" y1="17" x2="8" y2="17" />
-          <polyline points="10 9 9 9 8 9" />
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+          <path d="m9 16 2 2 4-4" />
         </svg>
       ),
     },
     solution: {
-      tag: 'Automation',
-      title: 'Procure-to-Pay Automation',
-      description: 'Automate invoice ingestion, 3-way PO matching, smart approval workflows, and direct ERP posting.',
-      outcome: 'Reduce manual effort',
+      tag: 'Oracle EPM',
+      title: 'Financial Close & Consolidation',
+      description: 'Unify multi-entity legal structures, automate intercompany eliminations, and Complete account reconcilations with speed up audited close.',
+      outcome: 'Accelerate financial close',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          <polyline points="20 6 9 17 4 12" />
         </svg>
       ),
     },
   },
   {
     id: 3,
-    challenge: {
-      tag: 'Data Silos',
-      title: 'Disconnected Financial Systems',
-      description: 'Critical numbers are fragmented across multiple ERPs, spreadsheets, and banking portals without sync.',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <ellipse cx="12" cy="5" rx="9" ry="3" />
-          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-        </svg>
-      ),
-    },
-    solution: {
-      tag: 'AI Powered',
-      title: 'AI-Powered Finance Automation',
-      description: 'Deploy autonomous agents to synchronize ledgers, detect spend anomalies, and continuously reconcile accounts.',
-      outcome: 'Improve forecast visibility',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-          <circle cx="12" cy="12" r="4" />
-        </svg>
-      ),
-    },
-  },
-  {
-    id: 4,
     challenge: {
       tag: 'Reporting',
       title: 'Slow Financial Reporting Cycles',
@@ -138,29 +111,56 @@ const PAIRS_DATA = [
     },
   },
   {
-    id: 5,
+    id: 4,
     challenge: {
-      tag: 'Compliance',
-      title: 'Complex Month-End Close',
-      description: 'Manual journal entries, intercompany eliminations, and currency conversions delay month-end signoffs.',
+      tag: 'Manual Process',
+      title: 'Manual Invoice & AP Processing',
+      description: 'Slow approval routing and repetitive manual entry delay vendor payments and inflate administrative costs.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-          <line x1="16" y1="2" x2="16" y2="6" />
-          <line x1="8" y1="2" x2="8" y2="6" />
-          <line x1="3" y1="10" x2="21" y2="10" />
-          <path d="m9 16 2 2 4-4" />
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="16" y1="13" x2="8" y2="13" />
+          <line x1="16" y1="17" x2="8" y2="17" />
+          <polyline points="10 9 9 9 8 9" />
         </svg>
       ),
     },
     solution: {
-      tag: 'Oracle EPM',
-      title: 'Financial Close & Consolidation',
-      description: 'Unify multi-entity legal structures, automate intercompany eliminations, and speed up audited close.',
-      outcome: 'Accelerate financial close',
+      tag: 'Automation',
+      title: 'Procure-to-Pay Automation',
+      description: 'Automate invoice ingestion, 3-way PO matching, smart approval workflows, and direct ERP posting.',
+      outcome: 'Reduce manual effort',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="20 6 9 17 4 12" />
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+        </svg>
+      ),
+    },
+  },
+  {
+    id: 5,
+    challenge: {
+      tag: 'Data Silos',
+      title: 'Disconnected Financial Systems',
+      description: 'Critical numbers are fragmented across multiple ERPs, spreadsheets, and banking portals without sync.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+        </svg>
+      ),
+    },
+    solution: {
+      tag: 'AI Powered',
+      title: 'AI-Powered Finance Automation',
+      description: 'Deploy autonomous agents to synchronize ledgers, detect spend anomalies, and continuously reconcile accounts.',
+      outcome: 'Improve forecast visibility',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+          <circle cx="12" cy="12" r="4" />
         </svg>
       ),
     },
@@ -250,7 +250,7 @@ export default function ChallengesSolutions() {
                   </span>
                   <span style={{ fontSize: '1.1rem', fontWeight: '500' }}>{pair.challenge.title}</span>
                 </button>
-                
+
                 {/* Expandable Content */}
                 <div
                   style={{
