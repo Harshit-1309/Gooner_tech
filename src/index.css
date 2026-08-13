@@ -6985,3 +6985,606 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Implementation Services Page Styles */
+.impl-hero {
+  display: flex;
+  min-height: 520px;
+  background-color: #e6effa;
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  padding: 130px 0 40px;
+  position: relative;
+  align-items: center;
+}
+
+.impl-hero__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 4%;
+}
+
+.impl-hero__left {
+  flex: 0 0 55%;
+  max-width: 55%;
+  padding: 20px 2% 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.impl-hero__spacer {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.impl-hero__eyebrow-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.impl-hero__eyebrow {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 850;
+  color: #0c4cb0;
+  letter-spacing: 0.12em;
+}
+
+.impl-hero__eyebrow-line {
+  flex-grow: 1;
+  height: 2px;
+  background: rgba(12, 76, 176, 0.15);
+  max-width: 80px;
+}
+
+.impl-hero__title {
+  font-family: var(--font-main);
+  font-size: clamp(2rem, 3.6vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #090a0f;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.impl-hero__title-blue {
+  color: #0c4cb0;
+}
+
+.impl-hero__desc {
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #334155;
+  max-width: 600px;
+}
+
+/* Includes grid box */
+.impl-includes-section {
+  background: #ffffff;
+  padding: 60px 4%;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.impl-includes__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.impl-includes-box {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.impl-includes__header {
+  font-family: var(--font-main);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #475569;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.impl-includes__grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+}
+
+.impl-include-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.impl-include-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(12, 76, 176, 0.05);
+  border: 1.5px solid rgba(12, 76, 176, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c4cb0;
+  transition: all 0.3s ease;
+}
+
+.impl-include-card:hover .impl-include-card__icon-wrap {
+  background: #0c4cb0;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(12, 76, 176, 0.2);
+}
+
+.impl-include-card__icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.impl-include-card__label {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  font-weight: 750;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+/* Approach & Tech details section */
+.impl-details-section {
+  background: #f8fafc;
+  padding: 80px 4%;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.impl-details__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 30px;
+}
+
+.impl-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.impl-card__header {
+  background: #0d1e3d;
+  color: #ffffff;
+  padding: 16px 24px;
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.impl-card__body {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+/* Flow list styles */
+.impl-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.impl-flow__step-wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.impl-flow__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  z-index: 2;
+}
+
+.impl-flow__icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(12, 76, 176, 0.06);
+  border: 1px solid rgba(12, 76, 176, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c4cb0;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.impl-flow__step:hover .impl-flow__icon-wrap {
+  background: #0c4cb0;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.impl-flow__icon-wrap svg {
+  width: 20px;
+  height: 20px;
+}
+
+.impl-flow__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.impl-flow__title {
+  font-family: var(--font-main);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.impl-flow__num {
+  font-size: 0.78rem;
+  background: rgba(12, 76, 176, 0.08);
+  color: #0c4cb0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.impl-flow__desc {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+/* Tech cards styles */
+.impl-tech__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.impl-tech-card {
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  padding: 20px;
+  background: #ffffff;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+}
+
+.impl-tech-card:hover {
+  background: #0c4cb0;
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(12, 76, 176, 0.15);
+}
+
+.impl-tech-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.impl-tech-card__icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(12, 76, 176, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c4cb0;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.impl-tech-card:hover .impl-tech-card__icon-wrap {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+}
+
+.impl-tech-card__icon-wrap svg {
+  width: 18px;
+  height: 18px;
+}
+
+.impl-tech-card__title {
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0f172a;
+  transition: color 0.3s ease;
+}
+
+.impl-tech-card:hover .impl-tech-card__title {
+  color: #ffffff;
+}
+
+.impl-tech-card__platforms {
+  font-family: var(--font-main);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #0c4cb0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-top: 1px dashed #f1f5f9;
+  padding-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.impl-tech-card:hover .impl-tech-card__platforms {
+  color: rgba(255, 255, 255, 0.9);
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Bottom banner section */
+.impl-banner-section {
+  background: #ffffff;
+  padding: 80px 4%;
+}
+
+.impl-banner__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.impl-banner-box {
+  background: linear-gradient(135deg, #0d1e3d 0%, #061022 100%);
+  border-radius: 16px;
+  padding: 40px;
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.impl-banner__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.impl-banner__intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 800px;
+}
+
+.impl-banner__target-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.impl-banner__target-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.impl-banner__text {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.impl-banner__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 750;
+  text-decoration: none;
+  transition: all 0.25s;
+  flex-shrink: 0;
+}
+
+.impl-banner__cta-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.impl-banner__flow {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.impl-banner__flow-label {
+  font-family: var(--font-main);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.impl-banner__flow-steps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+
+.impl-banner__flow-step-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.impl-banner__flow-step {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 850;
+  color: #ffffff;
+}
+
+.impl-banner__flow-arrow {
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+/* White Navbar for Implementation Services Page */
+.app-container:has(.impl-hero) .navbar-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .nav-link-standard,
+.app-container:has(.impl-hero) .navbar-header .brand {
+  color: #0f172a !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .brand span {
+  color: #0f172a !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .dropdown-arrow-icon {
+  color: #0f172a !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .nav-btn-contact {
+  border-color: rgba(15, 23, 42, 0.15) !important;
+  background: rgba(15, 23, 42, 0.05) !important;
+  color: #0f172a !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .nav-btn-contact:hover {
+  background: var(--blue-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--blue-primary) !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .mobile-menu-toggle .hamburger-line {
+  background-color: #0f172a !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .nav-dropdown-menu {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .nav-dropdown-link {
+  color: #475569 !important;
+}
+
+.app-container:has(.impl-hero) .navbar-header .nav-dropdown-link:hover {
+  color: var(--blue-primary) !important;
+  background-color: rgba(56, 142, 255, 0.05) !important;
+}
+
+/* Responsive Media Queries for Implementation Services Page */
+@media (max-width: 1200px) {
+  .impl-details__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .impl-hero {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+  .impl-hero__left {
+    padding: 40px 6%;
+    max-width: 100%;
+  }
+  .impl-hero__spacer {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .impl-hero {
+    background-size: cover;
+    background-position: right center;
+  }
+  .impl-hero__left {
+    background: rgba(230, 239, 250, 0.9);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    margin: 0 4%;
+    padding: 30px 6%;
+  }
+  .impl-includes__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .impl-banner__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .impl-banner__cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .impl-includes__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .impl-includes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .impl-banner-box {
+    padding: 24px;
+  }
+  .impl-banner__flow-steps {
+    gap: 8px 12px;
+  }
+}
+

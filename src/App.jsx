@@ -4,6 +4,7 @@ import Product from './pages/Product';
 import AboutUs from './pages/AboutUs';
 import ConsultingServices from './pages/ConsultingServices';
 import ManagedServices from './pages/ManagedServices';
+import ImplementationServices from './pages/ImplementationServices';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/services/consulting" element={<ConsultingServices />} />
+        <Route path="/services/implementation" element={<ImplementationServices />} />
         <Route path="/services/managed" element={<ManagedServices />} />
         <Route path="/about-us" element={<AboutUs />} />
       </Routes>
