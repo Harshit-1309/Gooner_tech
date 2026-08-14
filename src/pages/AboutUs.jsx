@@ -7,34 +7,34 @@ import heroBg from '../assets/consulting_hero.png';
 
 const TEAM_MEMBERS = [
   {
-    name: 'Andy Pieroux',
-    role: 'Founder & Managing Director',
-    image: '/assets/Our%20people/Andy%20Pieroux.jpeg'
+    name: 'Soban Kuruvikar',
+    role: 'Co founder',
+    image: '/assets/Our%20people/Soban%20Kuruvikar.jpeg'
   },
   {
     name: 'Raju Singh',
-    role: 'Enterprise Performance Management (EPM) Lead',
+    role: 'Co founder',
     image: '/assets/Our%20people/Raju%20Singh.jpeg'
   },
   {
-    name: 'Ekta Singh',
-    role: 'Finance Systems Architect',
-    image: '/assets/Our%20people/Ekta%20Singh.jpeg'
+    name: 'Andy Pieroux',
+    role: 'Mentor',
+    image: '/assets/Our%20people/Andy%20Pieroux.jpeg'
   },
   {
     name: 'Zahir Shaikh',
-    role: 'NetSuite & ERP Solution Architect',
+    role: 'EPM Practice Head',
     image: '/assets/Our%20people/Zahir%20Shaikh.jpeg'
   },
   {
-    name: 'Harshit Singh',
-    role: 'Lead Technology Architect',
-    image: '/assets/Our%20people/Harshit%20Singh.jpeg'
+    name: 'Ekta Singh',
+    role: 'Senior Consultant',
+    image: '/assets/Our%20people/Ekta%20Singh.jpeg'
   },
   {
-    name: 'Soban Kuruvikar',
-    role: 'Lead Data Scientist & AI Engineer',
-    image: '/assets/Our%20people/Soban%20Kuruvikar.jpeg'
+    name: 'Harshit Singh',
+    role: 'Consultant',
+    image: '/assets/Our%20people/Harshit%20Singh.jpeg'
   }
 ];
 
