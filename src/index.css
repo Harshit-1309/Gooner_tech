@@ -7069,9 +7069,9 @@ body {
 
 /* Includes grid box */
 .impl-includes-section {
-  background: #0b1528;
+  background: #ffffff;
   padding: 60px 4%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .impl-includes__container {
