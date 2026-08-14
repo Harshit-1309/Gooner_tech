@@ -7333,26 +7333,14 @@ body {
   font-size: 1.1rem;
   font-weight: 800;
   margin-bottom: 6px;
-}
-
-.impl-serpentine__step--discover .impl-serpentine__title,
-.impl-serpentine__step--build .impl-serpentine__title,
-.impl-serpentine__step--deploy .impl-serpentine__title,
-.impl-serpentine__step--transition .impl-serpentine__title {
   color: #ffffff;
-}
-
-.impl-serpentine__step--design .impl-serpentine__title,
-.impl-serpentine__step--validate .impl-serpentine__title,
-.impl-serpentine__step--enable .impl-serpentine__title {
-  color: #60a5fa;
 }
 
 .impl-serpentine__desc {
   font-family: var(--font-main);
   font-size: 0.8rem;
   line-height: 1.4;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .impl-serpentine__step--discover {
