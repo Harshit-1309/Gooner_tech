@@ -7,14 +7,14 @@ import heroBg from '../assets/consulting_hero.png';
 
 const TEAM_MEMBERS = [
   {
+    name: 'Soban Kuruvikar',
+    role: 'Co founder',
+    image: '/assets/Our%20people/Soban%20Kuruvikar.jpeg'
+  },
+  {
     name: 'Raju Singh',
     role: 'Co founder',
     image: '/assets/Our%20people/Raju%20Singh.jpeg'
-  },
-  {
-    name: 'Zahir Shaikh',
-    role: 'EPM Practice Head',
-    image: '/assets/Our%20people/Zahir%20Shaikh.jpeg'
   },
   {
     name: 'Andy Pieroux',
@@ -22,14 +22,19 @@ const TEAM_MEMBERS = [
     image: '/assets/Our%20people/Andy%20Pieroux.jpeg'
   },
   {
-    name: 'Soban Kuruvikar',
-    role: 'Co founder',
-    image: '/assets/Our%20people/Soban%20Kuruvikar.jpeg'
+    name: 'Zahir Shaikh',
+    role: 'EPM Practice Head',
+    image: '/assets/Our%20people/Zahir%20Shaikh.jpeg'
   },
   {
     name: 'Ekta Singh',
     role: 'Senior Consultant',
     image: '/assets/Our%20people/Ekta%20Singh.jpeg'
+  },
+  {
+    name: 'Harshit Singh',
+    role: 'Consultant',
+    image: '/assets/Our%20people/Harshit%20Singh.jpeg'
   }
 ];
 
