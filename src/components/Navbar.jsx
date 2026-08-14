@@ -12,8 +12,8 @@ export default function Navbar({ links }) {
       label: 'Services', 
       href: '/services/consulting',
       dropdown: [
-        { label: 'Consulting Services', href: '/services/consulting' },
-        { label: 'Implementation Services', href: '/services/implementation' },
+        { label: 'Consulting', href: '/services/consulting' },
+        { label: 'Implementation', href: '/services/implementation' },
         { label: 'Managed Services', href: '/services/managed' }
       ]
     },
