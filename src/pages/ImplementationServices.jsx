@@ -226,34 +226,34 @@ export default function ImplementationServices() {
                     {/* Serpentine Connecting Path (7 turns) */}
                     <path
                       d="M 40,200 L 40,100 Q 40,50 80,50 L 120,50 Q 160,50 160,100 L 160,300 Q 160,350 200,350 L 240,350 Q 280,350 280,300 L 280,100 Q 280,50 320,50 L 360,50 Q 400,50 400,100 L 400,300 Q 400,350 440,350 L 480,350 Q 520,350 520,300 L 520,100 Q 520,50 560,50 L 600,50 Q 640,50 640,100 L 640,300 Q 640,350 680,350 L 720,350 Q 760,350 760,300 L 760,100 Q 760,50 800,50 L 840,50 Q 880,50 880,100 L 880,200"
-                      stroke="#0c4cb0"
+                      stroke="#3b82f6"
                       strokeWidth="4"
                       strokeLinecap="round"
                     />
 
                     {/* Start dot */}
-                    <circle cx="40" cy="200" r="10" fill="#0c4cb0" />
+                    <circle cx="40" cy="200" r="10" fill="#3b82f6" />
 
                     {/* End dot */}
-                    <circle cx="880" cy="200" r="10" fill="#0c4cb0" />
+                    <circle cx="880" cy="200" r="10" fill="#3b82f6" />
 
                     {/* Down arrow 1 */}
-                    <path d="M 152,190 L 160,205 L 168,190" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 152,190 L 160,205 L 168,190" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
 
                     {/* Up arrow 1 */}
-                    <path d="M 272,210 L 280,195 L 288,210" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 272,210 L 280,195 L 288,210" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
 
                     {/* Down arrow 2 */}
-                    <path d="M 392,190 L 400,205 L 408,190" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 392,190 L 400,205 L 408,190" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
 
                     {/* Up arrow 2 */}
-                    <path d="M 512,210 L 520,195 L 528,210" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 512,210 L 520,195 L 528,210" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
 
                     {/* Down arrow 3 */}
-                    <path d="M 632,190 L 640,205 L 648,190" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 632,190 L 640,205 L 648,190" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
 
                     {/* Up arrow 3 */}
-                    <path d="M 752,210 L 760,195 L 768,210" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 752,210 L 760,195 L 768,210" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
 
                   {/* Serpentine Step Details Overlays */}

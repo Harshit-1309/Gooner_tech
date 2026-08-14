@@ -7168,6 +7168,17 @@ body {
   flex-direction: column;
 }
 
+.impl-card--approach {
+  background: linear-gradient(135deg, #0d1e3d 0%, #061022 100%);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.impl-card--approach .impl-card__header {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .impl-card__header {
   background: #0d1e3d;
   color: #ffffff;
@@ -7327,55 +7338,55 @@ body {
 .impl-serpentine__step--build .impl-serpentine__title,
 .impl-serpentine__step--deploy .impl-serpentine__title,
 .impl-serpentine__step--transition .impl-serpentine__title {
-  color: #0f172a;
+  color: #ffffff;
 }
 
 .impl-serpentine__step--design .impl-serpentine__title,
 .impl-serpentine__step--validate .impl-serpentine__title,
 .impl-serpentine__step--enable .impl-serpentine__title {
-  color: #3b82f6;
+  color: #60a5fa;
 }
 
 .impl-serpentine__desc {
   font-family: var(--font-main);
   font-size: 0.8rem;
   line-height: 1.4;
-  color: #475569;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .impl-serpentine__step--discover {
   left: 10.87%;
-  top: 25%;
+  top: 33%;
 }
 
 .impl-serpentine__step--design {
   left: 23.91%;
-  top: 75%;
+  top: 67%;
 }
 
 .impl-serpentine__step--build {
   left: 36.96%;
-  top: 25%;
+  top: 33%;
 }
 
 .impl-serpentine__step--validate {
   left: 50.00%;
-  top: 75%;
+  top: 67%;
 }
 
 .impl-serpentine__step--deploy {
   left: 63.04%;
-  top: 25%;
+  top: 33%;
 }
 
 .impl-serpentine__step--enable {
   left: 76.09%;
-  top: 75%;
+  top: 67%;
 }
 
 .impl-serpentine__step--transition {
   left: 89.13%;
-  top: 25%;
+  top: 33%;
 }
 
 .impl-serpentine-mobile {
@@ -7703,6 +7714,15 @@ body {
     text-align: left;
     gap: 20px;
   }
+  .impl-flow__icon-wrap {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #60a5fa !important;
+  }
+  .impl-flow__step:hover .impl-flow__icon-wrap {
+    background: #0c4cb0 !important;
+    color: #ffffff !important;
+  }
   .impl-flow__details {
     align-items: flex-start;
   }
@@ -7710,9 +7730,11 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 8px;
+    color: #ffffff !important;
   }
   .impl-flow__desc {
     max-width: 100%;
+    color: rgba(255, 255, 255, 0.7) !important;
   }
   .impl-banner__top {
     flex-direction: column;
