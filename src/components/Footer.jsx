@@ -1,15 +1,21 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import goonerLogo from '../assets/logo.png';
 
 export default function Footer() {
   const [newsEmail, setNewsEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [isSubscribing, setIsSubscribing] = useState(false);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (newsEmail && newsEmail.includes('@')) {
-      setSubscribed(true);
-      setNewsEmail('');
+      setIsSubscribing(true);
+      setTimeout(() => {
+        setIsSubscribing(false);
+        setSubscribed(true);
+        setNewsEmail('');
+      }, 1000);
     }
   };
 
@@ -28,8 +34,8 @@ export default function Footer() {
       <div className="footer__glow" aria-hidden="true" />
 
       <div className="footer__container">
-        {/* Top Tier: Brand and Newsletter */}
-        <div className="footer__top">
+        <div className="footer__main-grid">
+          {/* Col 1: Brand */}
           <div className="footer__brand-col">
             <a href="#" className="brand footer-brand" onClick={(e) => handleScrollTo(e, '#hero')}>
               <img src={goonerLogo} alt="Gooner Technology" className="brand__logo-img" />
@@ -39,16 +45,36 @@ export default function Footer() {
             <p className="footer__mission">
               Empowering global organizations with intelligent financial planning, multi-entity consolidation, and autonomous AI-driven automation.
             </p>
-            <div className="footer__badges">
-              <span className="footer-badge">Oracle NetSuite Partner</span>
-              <span className="footer-badge">SOC2 Certified</span>
-            </div>
           </div>
 
+          {/* Col 2: Quick Links */}
+          <div className="footer__nav-col">
+            <h4 className="footer__nav-title">Quick Links</h4>
+            <ul className="footer__nav-list">
+              <li><a href="#why-us" onClick={(e) => handleScrollTo(e, '#why-us')}>Why Gooner Technology</a></li>
+              <li><a href="#challenges" onClick={(e) => handleScrollTo(e, '#challenges')}>Challenges &amp; Solutions</a></li>
+              <li><a href="#proven-impact" onClick={(e) => handleScrollTo(e, '#proven-impact')}>Business Impact</a></li>
+              <li><a href="#case-studies" onClick={(e) => handleScrollTo(e, '#case-studies')}>Client Case Studies</a></li>
+              <li><a href="#testimonials" onClick={(e) => handleScrollTo(e, '#testimonials')}>Client Testimonials</a></li>
+            </ul>
+          </div>
+
+          {/* Col 3: Global Presence */}
+          <div className="footer__nav-col">
+            <h4 className="footer__nav-title">Global Presence</h4>
+            <p className="footer__presence-text">London, United Kingdom</p>
+            <p className="footer__presence-text">New York, NY, USA</p>
+            <p className="footer__presence-text">Singapore, SG</p>
+            <p className="footer__presence-text email-link">
+              <a href="mailto:contact@goonertech.com">contact@goonertech.com</a>
+            </p>
+          </div>
+
+          {/* Col 4: Newsletter */}
           <div className="footer__newsletter-col">
-            <h4 className="footer__col-heading">Executive Finance Insights</h4>
+            <h4 className="footer__nav-title">Finance Insights</h4>
             <p className="footer__newsletter-desc">
-              Subscribe to our monthly brief on enterprise FP&amp;A automation, EPM benchmarks, and AI finance agents.
+              Subscribe to our monthly brief on enterprise FP&amp;A automation and EPM benchmarks.
             </p>
 
             {subscribed ? (
@@ -65,54 +91,11 @@ export default function Footer() {
                   className="newsletter-input"
                   required
                 />
-                <button type="submit" className="newsletter-submit-btn">
-                  Subscribe
+                <button type="submit" className="newsletter-submit-btn" disabled={isSubscribing}>
+                  {isSubscribing ? 'Subscribing...' : 'Subscribe'}
                 </button>
               </form>
             )}
-          </div>
-        </div>
-
-        {/* Mid Tier: Navigation Columns */}
-        <div className="footer__nav-grid">
-          <div className="footer__nav-col">
-            <h4 className="footer__nav-title">Products &amp; Solutions</h4>
-            <ul className="footer__nav-list">
-              <li><a href="#products" onClick={(e) => handleScrollTo(e, '#products')}>NetSuite Planning (NSPB)</a></li>
-              <li><a href="#products" onClick={(e) => handleScrollTo(e, '#products')}>EPM Financial Consolidation</a></li>
-              <li><a href="#products" onClick={(e) => handleScrollTo(e, '#products')}>Executive BI &amp; Analytics</a></li>
-              <li><a href="#products" onClick={(e) => handleScrollTo(e, '#products')}>AI Finance Agents</a></li>
-            </ul>
-          </div>
-
-          <div className="footer__nav-col">
-            <h4 className="footer__nav-title">Services</h4>
-            <ul className="footer__nav-list">
-              <li><a href="#services" onClick={(e) => handleScrollTo(e, '#services')}>Architecture &amp; Advisory</a></li>
-              <li><a href="#services" onClick={(e) => handleScrollTo(e, '#services')}>NSPB Implementation</a></li>
-              <li><a href="#services" onClick={(e) => handleScrollTo(e, '#services')}>ERP &amp; BI Integrations</a></li>
-              <li><a href="#services" onClick={(e) => handleScrollTo(e, '#services')}>24/7 Managed Services</a></li>
-            </ul>
-          </div>
-
-          <div className="footer__nav-col">
-            <h4 className="footer__nav-title">Company</h4>
-            <ul className="footer__nav-list">
-              <li><a href="#why-us" onClick={(e) => handleScrollTo(e, '#why-us')}>Why Gooner Technology</a></li>
-              <li><a href="#trusted-by" onClick={(e) => handleScrollTo(e, '#trusted-by')}>Client Case Studies</a></li>
-              <li><a href="#challenges-solutions" onClick={(e) => handleScrollTo(e, '#challenges-solutions')}>Challenges &amp; Solutions</a></li>
-              <li><a href="#contact-us" onClick={(e) => handleScrollTo(e, '#contact-us')}>Request Assessment Demo</a></li>
-            </ul>
-          </div>
-
-          <div className="footer__nav-col">
-            <h4 className="footer__nav-title">Global Presence</h4>
-            <p className="footer__presence-text">London, United Kingdom</p>
-            <p className="footer__presence-text">New York, NY, USA</p>
-            <p className="footer__presence-text">Singapore, SG</p>
-            <p className="footer__presence-text email-link">
-              <a href="mailto:contact@goonertech.com">contact@goonertech.com</a>
-            </p>
           </div>
         </div>
 
@@ -122,11 +105,11 @@ export default function Footer() {
             © {new Date().getFullYear()} Gooner Technology. All rights reserved. Built with modern React.
           </p>
           <div className="footer__legal-links">
-            <a href="#hero" onClick={(e) => handleScrollTo(e, '#hero')}>Privacy Policy</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
             <span className="legal-dot">•</span>
-            <a href="#hero" onClick={(e) => handleScrollTo(e, '#hero')}>Terms of Service</a>
+            <Link to="/terms-of-service">Terms of Service</Link>
             <span className="legal-dot">•</span>
-            <a href="#hero" onClick={(e) => handleScrollTo(e, '#hero')}>Security &amp; Compliance</a>
+            <Link to="/security-compliance">Security &amp; Compliance</Link>
           </div>
         </div>
       </div>
