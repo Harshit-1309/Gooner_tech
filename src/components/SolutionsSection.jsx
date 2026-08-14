@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { Link } from 'react-router-dom';
 
 const SOLUTIONS = [
   {
@@ -118,9 +119,9 @@ export default function SolutionsSection() {
               </div>
               
               <div className="solutions-card__cta">
-                <a href="#contact-us" className="solutions-link-btn">
+                <Link to="/contact-us" className="solutions-link-btn">
                   Explore Solution <span>→</span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -163,9 +164,9 @@ export default function SolutionsSection() {
                 </div>
                 <h3 className="solutions-card__title">{sol.title}</h3>
                 <p className="solutions-card__desc">{sol.description}</p>
-                <a href="#contact-us" className="solutions-card__link">
+                <Link to="/contact-us" className="solutions-card__link">
                   Learn more <span>→</span>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HeroContent({
   text = 'We build intelligent finance systems',
   subtitle = 'Using Enterprise Performance Management (EPM), Business Intelligence (BI), and Artificial Intelligence (AI), we help organizations automate budgeting, forecasting, consolidation, account reconciliations, reporting, and analytics, enabling finance teams to spend more time making business decisions and less time preparing spreadsheets.',
   primaryCtaText = 'Request an NSPB Assessment Demo',
-  primaryCtaHref = '#contact-us',
+  primaryCtaHref = '/contact-us',
   secondaryCtaText = 'Explore Solutions',
   secondaryCtaHref = '#challenges'
 }) {
@@ -72,14 +73,10 @@ export default function HeroContent({
         <div className="t-cta-ambient-glow" aria-hidden="true" />
 
         {/* Primary CTA Button */}
-        <a
-          href={primaryCtaHref}
-          className="t-cta t-cta--primary"
-          onClick={(e) => handleSmoothScroll(e, primaryCtaHref)}
-        >
+        <Link to={primaryCtaHref} className="t-cta t-cta--primary">
           <span className="t-cta__label">{primaryCtaText}</span>
           <span className="t-cta__arrow" aria-hidden="true">→</span>
-        </a>
+        </Link>
 
         {/* Secondary Outline/Glass CTA Button */}
         <a

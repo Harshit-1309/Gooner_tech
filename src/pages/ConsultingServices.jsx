@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import consultingHero from '../assets/consulting_hero.png';
@@ -236,9 +237,9 @@ export default function ConsultingServices() {
               Let's explore how Gooner Technologies can help you plan smarter, optimize processes, and create greater value from your finance technology.
             </p>
             <div className="cta-photo__buttons">
-              <a href="/#contact-us" className="cta-photo-btn cta-photo-btn--solid">
-                Schedule a Consultation &rarr;
-              </a>
+              <Link to="/contact-us" className="cta-photo-btn cta-photo-btn--solid">
+                Talk to an Expert
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 
 const INSIGHTS_DATA = [
   {
@@ -205,13 +206,13 @@ export default function InsightsSection() {
                 
                 <div className="insight-card__footer">
                   <span className="insight-date">{filteredInsights[0].date}</span>
-                  <a href="#contact-us" className="insight-read-link">
+                  <Link to="/contact-us" className="insight-read-link">
                     <span>Read Article</span>
                     <svg className="insight-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="2" y1="8" x2="14" y2="8" />
                       <polyline points="9 3 14 8 9 13" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>
@@ -245,13 +246,13 @@ export default function InsightsSection() {
 
                 <div className="insight-card__footer">
                   <span className="insight-date">{item.date}</span>
-                  <a href="#contact-us" className="insight-read-link">
+                  <Link to="/contact-us" className="insight-read-link">
                     <span>Read Article</span>
                     <svg className="insight-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="2" y1="8" x2="14" y2="8" />
                       <polyline points="9 3 14 8 9 13" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -262,13 +263,13 @@ export default function InsightsSection() {
             BOTTOM ACTION
             ========================================================= */}
         <div className="insights-bottom-action">
-          <a href="#contact-us" className="insights-center-btn">
+          <Link to="/contact-us" className="insights-center-btn">
             <span>Explore Knowledge Center</span>
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="2" y1="8" x2="14" y2="8" />
               <polyline points="9 3 14 8 9 13" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

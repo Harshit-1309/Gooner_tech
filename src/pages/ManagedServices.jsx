@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import managedHeroImg from '../assets/managed_services_hero.png';
@@ -341,9 +342,9 @@ export default function ManagedServices() {
               Focus on strategic priorities while our experts manage, support, and continuously improve your finance applications.
             </p>
             <div className="cta-photo__buttons">
-              <a href="/#contact-us" className="cta-photo-btn cta-photo-btn--solid">
-                Talk to a Managed Services Expert &rarr;
-              </a>
+              <Link to="/contact-us" className="cta-photo-btn cta-photo-btn--solid">
+                Discuss Managed Services
+              </Link>
             </div>
           </div>
         </div>

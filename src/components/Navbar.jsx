@@ -18,7 +18,7 @@ export default function Navbar({ links }) {
       ]
     },
     { label: 'About Us', href: '/about-us' },
-    { label: 'Contact Us', href: '/#contact-us', isButton: true },
+    { label: 'Contact Us', href: '/contact-us', isButton: true },
   ];
 
   const navItems = links || defaultLinks;

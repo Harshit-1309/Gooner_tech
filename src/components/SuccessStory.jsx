@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function SuccessStory() {
   const sectionRef = useRef(null);
@@ -287,10 +288,10 @@ export default function SuccessStory() {
             CALL TO ACTION
             ========================================================= */}
         <div className="story-cta-actions">
-          <a href="#contact-us" className="story-btn story-btn--primary">
+          <Link to="/contact-us" className="story-btn story-btn--primary">
             <span>Schedule Consultation</span>
             <span className="story-btn-arrow" aria-hidden="true">→</span>
-          </a>
+          </Link>
           <a href="#case-study" className="story-btn story-btn--secondary">
             <span>View Full Case Study</span>
             <span className="story-btn-arrow" aria-hidden="true">→</span>

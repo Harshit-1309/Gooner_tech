@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import productHeroBg from '../assets/product_hero_bg.png';
@@ -263,9 +264,9 @@ export default function Product() {
                 <p className="bottom-partner__subtitle">
                   Strategy to implementation. Implementation to optimization. We are with you at every step.
                 </p>
-                <a href="/#contact-us" className="bottom-partner__btn">
+                <Link to="/contact-us" className="bottom-partner__btn">
                   Talk to a Finance Technology Expert &rarr;
-                </a>
+                </Link>
               </div>
             </div>
           </div>

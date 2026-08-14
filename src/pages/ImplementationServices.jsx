@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import implementationHeroBg from '../assets/implementation_hero_bg.png';
@@ -338,12 +339,12 @@ export default function ImplementationServices() {
                   A finance solution that is <strong>designed around your business</strong>, properly integrated with your existing ecosystem, validated by <strong>your users</strong>, and ready for long-term operation.
                 </p>
               </div>
-              <a href="/#contact-us" className="impl-banner__cta-btn">
+              <Link to="/contact-us" className="impl-banner__cta-btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: '18px', height: '18px', marginRight: '8px' }}>
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                 </svg>
                 Discuss Your Implementation
-              </a>
+              </Link>
             </div>
 
             <div className="impl-banner__flow">
