@@ -6990,8 +6990,8 @@ body {
 .impl-hero {
   display: flex;
   min-height: 520px;
-  background-color: #e6effa;
-  background-size: contain;
+  background-color: #0d1e3d;
+  background-size: cover;
   background-position: right bottom;
   background-repeat: no-repeat;
   padding: 130px 0 40px;
@@ -7034,14 +7034,14 @@ body {
   font-family: var(--font-main);
   font-size: 1rem;
   font-weight: 700;
-  color: #0c4cb0;
+  color: #60a5fa;
   letter-spacing: 0.1em;
 }
 
 .impl-hero__eyebrow-line {
   flex-grow: 1;
   height: 2px;
-  background: rgba(12, 76, 176, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   max-width: 80px;
 }
 
@@ -7050,20 +7050,20 @@ body {
   font-size: clamp(2rem, 3.8vw, 3.4rem);
   font-weight: 800;
   line-height: 1.2;
-  color: #090a0f;
+  color: #ffffff;
   margin-bottom: 24px;
   letter-spacing: -0.01em;
 }
 
 .impl-hero__title-blue {
-  color: #0c4cb0;
+  color: #60a5fa;
 }
 
 .impl-hero__desc {
   font-family: var(--font-main);
   font-size: 1.05rem;
   line-height: 1.65;
-  color: #334155;
+  color: rgba(255, 255, 255, 0.85);
   max-width: 600px;
 }
 
@@ -7600,58 +7600,7 @@ body {
   font-weight: bold;
 }
 
-/* White Navbar for Implementation Services Page */
-.app-container:has(.impl-hero) .navbar-header {
-  background: #ffffff !important;
-  border-bottom: 1px solid #e2e8f0 !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
-}
 
-.app-container:has(.impl-hero) .navbar-header .nav-link-standard,
-.app-container:has(.impl-hero) .navbar-header .brand {
-  color: #0f172a !important;
-}
-
-.app-container:has(.impl-hero) .navbar-header .brand span {
-  color: #0f172a !important;
-}
-
-.app-container:has(.impl-hero) .navbar-header .dropdown-arrow-icon {
-  color: #0f172a !important;
-}
-
-.app-container:has(.impl-hero) .navbar-header .nav-btn-contact {
-  border-color: rgba(15, 23, 42, 0.15) !important;
-  background: rgba(15, 23, 42, 0.05) !important;
-  color: #0f172a !important;
-}
-
-.app-container:has(.impl-hero) .navbar-header .nav-btn-contact:hover {
-  background: var(--blue-primary) !important;
-  color: #ffffff !important;
-  border-color: var(--blue-primary) !important;
-}
-
-.app-container:has(.impl-hero) .navbar-header .mobile-menu-toggle .hamburger-line {
-  background-color: #0f172a !important;
-}
-
-.app-container:has(.impl-hero) .navbar-header .nav-dropdown-menu {
-  background: #ffffff !important;
-  border: 1px solid #e2e8f0 !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
-}
-
-.app-container:has(.impl-hero) .navbar-header .nav-dropdown-link {
-  color: #475569 !important;
-}
-
-.app-container:has(.impl-hero) .navbar-header .nav-dropdown-link:hover {
-  color: var(--blue-primary) !important;
-  background-color: rgba(56, 142, 255, 0.05) !important;
-}
 
 /* Responsive Media Queries for Implementation Services Page */
 @media (max-width: 1200px) {
@@ -7680,10 +7629,10 @@ body {
     background-position: right center;
   }
   .impl-hero__left {
-    background: rgba(230, 239, 250, 0.9);
+    background: rgba(13, 30, 61, 0.9);
     border-radius: 16px;
     backdrop-filter: blur(8px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     margin: 0 4%;
     padding: 30px 6%;
   }
