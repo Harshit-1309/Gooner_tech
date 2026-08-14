@@ -1,7 +1,7 @@
 @import './refinements.css';
 
 /* =========================================================
-   GOONER TECHNOLOGY — CORE DESIGN SYSTEM & STYLESHEET
+   GOONER TECHNOLOGIES — CORE DESIGN SYSTEM & STYLESHEET
    Intelligent Finance Systems • EPM • BI • AI
    ========================================================= */
 
@@ -2124,7 +2124,7 @@ body {
 }
 
 /* =========================================================
-   9. WHY GOONER TECHNOLOGY (DIFFERENTIATORS & METRICS)
+   9. WHY GOONER TECHNOLOGIES (DIFFERENTIATORS & METRICS)
    ========================================================= */
 
 .why-gooner-section {
@@ -4855,7 +4855,7 @@ body {
 .footer__presence-text {
   font-size: 0.88rem;
   color: var(--text-secondary);
-  margin-bottom: 6px;
+  margin-bottom: 14px;
 }
 
 .email-link a {
@@ -7058,8 +7058,9 @@ body {
 
 .impl-hero__eyebrow-wrap {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
@@ -7072,10 +7073,9 @@ body {
 }
 
 .impl-hero__eyebrow-line {
-  flex-grow: 1;
+  width: 80px;
   height: 2px;
   background: rgba(255, 255, 255, 0.25);
-  max-width: 80px;
 }
 
 .impl-hero__title {
@@ -7795,8 +7795,9 @@ body {
 
 .about-hero__eyebrow-wrap {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
@@ -7809,10 +7810,9 @@ body {
 }
 
 .about-hero__eyebrow-line {
-  flex-grow: 1;
+  width: 80px;
   height: 2px;
   background: rgba(255, 255, 255, 0.25);
-  max-width: 80px;
 }
 
 .about-hero__title {

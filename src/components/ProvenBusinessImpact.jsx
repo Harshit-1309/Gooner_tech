@@ -4,7 +4,7 @@ const METRICS_DATA = [
   {
     id: 'm1',
     category: 'Implementations',
-    numericTarget: 60,
+    numericTarget: 100,
     prefix: '',
     suffix: '+',
     label: 'Successful Implementations',
@@ -77,8 +77,7 @@ const METRICS_DATA = [
     category: 'Global Presence',
     isText: true,
     textDisplay: 'Global',
-    regionTag: 'US • UK • India',
-    label: 'Delivery Across US, UK & India',
+    label: 'Delivery Across North America, Europe & Asia',
     sublabel: 'Distributed round-the-clock advisory & support',
     isPrimary: false,
     icon: (
@@ -142,7 +141,7 @@ export default function ProvenBusinessImpact() {
     const startTime = performance.now();
 
     const targets = {
-      m1: 60,
+      m1: 100,
       m3: 16,
       m4: 4,
       m5: 70,

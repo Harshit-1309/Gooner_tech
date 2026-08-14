@@ -38,9 +38,9 @@ export default function Footer() {
           {/* Col 1: Brand */}
           <div className="footer__brand-col">
             <a href="#" className="brand footer-brand" onClick={(e) => handleScrollTo(e, '#hero')}>
-              <img src={goonerLogo} alt="Gooner Technology" className="brand__logo-img" />
+              <img src={goonerLogo} alt="Gooner Technologies" className="brand__logo-img" />
               <span className="brand__divider" aria-hidden="true" />
-              <span className="brand__name">Gooner Technology</span>
+              <span className="brand__name">Gooner Technologies</span>
             </a>
             <p className="footer__mission">
               Empowering global organizations with intelligent financial planning, multi-entity consolidation, and autonomous AI-driven automation.
@@ -51,58 +51,38 @@ export default function Footer() {
           <div className="footer__nav-col">
             <h4 className="footer__nav-title">Quick Links</h4>
             <ul className="footer__nav-list">
-              <li><a href="#why-us" onClick={(e) => handleScrollTo(e, '#why-us')}>Why Gooner Technology</a></li>
-              <li><a href="#challenges" onClick={(e) => handleScrollTo(e, '#challenges')}>Challenges &amp; Solutions</a></li>
+              <li><a href="#why-us" onClick={(e) => handleScrollTo(e, '#why-us')}>Why Choose Us</a></li>
               <li><a href="#proven-impact" onClick={(e) => handleScrollTo(e, '#proven-impact')}>Business Impact</a></li>
               <li><a href="#case-studies" onClick={(e) => handleScrollTo(e, '#case-studies')}>Client Case Studies</a></li>
-              <li><a href="#testimonials" onClick={(e) => handleScrollTo(e, '#testimonials')}>Client Testimonials</a></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/faqs">FAQs</Link></li>
             </ul>
           </div>
 
-          {/* Col 3: Global Presence */}
+          {/* Col 3: Technologies & Services */}
           <div className="footer__nav-col">
-            <h4 className="footer__nav-title">Global Presence</h4>
-            <p className="footer__presence-text">London, United Kingdom</p>
-            <p className="footer__presence-text">New York, NY, USA</p>
-            <p className="footer__presence-text">Singapore, SG</p>
-            <p className="footer__presence-text email-link">
-              <a href="mailto:contact@goonertech.com">contact@goonertech.com</a>
-            </p>
+            <h4 className="footer__nav-title">Technologies &amp; Services</h4>
+            <ul className="footer__nav-list">
+              <li><Link to="/product">Technologies</Link></li>
+              <li><Link to="/services/consulting">Consulting</Link></li>
+              <li><Link to="/services/implementation">Implementation</Link></li>
+              <li><Link to="/services/managed">Managed Services</Link></li>
+            </ul>
           </div>
 
-          {/* Col 4: Newsletter */}
-          <div className="footer__newsletter-col">
-            <h4 className="footer__nav-title">Finance Insights</h4>
-            <p className="footer__newsletter-desc">
-              Subscribe to our monthly brief on enterprise FP&amp;A automation and EPM benchmarks.
-            </p>
-
-            {subscribed ? (
-              <div className="newsletter-success">
-                <span>✓ Thank you for subscribing!</span>
-              </div>
-            ) : (
-              <form className="footer__newsletter-form" onSubmit={handleSubscribe}>
-                <input
-                  type="email"
-                  value={newsEmail}
-                  onChange={(e) => setNewsEmail(e.target.value)}
-                  placeholder="Enter your work email..."
-                  className="newsletter-input"
-                  required
-                />
-                <button type="submit" className="newsletter-submit-btn" disabled={isSubscribing}>
-                  {isSubscribing ? 'Subscribing...' : 'Subscribe'}
-                </button>
-              </form>
-            )}
+          {/* Col 4: Global Presence */}
+          <div className="footer__nav-col">
+            <h4 className="footer__nav-title">Global Presence</h4>
+            <p className="footer__presence-text">North Carolina, USA</p>
+            <p className="footer__presence-text">London, UK</p>
+            <p className="footer__presence-text">Mumbai, India</p>
           </div>
         </div>
 
         {/* Bottom Tier: Legal & Copyright */}
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © {new Date().getFullYear()} Gooner Technology. All rights reserved. Built with modern React.
+            © {new Date().getFullYear()} Gooner Technologies. All rights reserved.
           </p>
           <div className="footer__legal-links">
             <Link to="/privacy-policy">Privacy Policy</Link>

@@ -69,11 +69,11 @@ export default function Navbar({ links }) {
           <Link to="/" className="brand" onClick={() => setMobileMenuOpen(false)}>
             <img
               src={goonerLogo}
-              alt="Gooner Technology Logo"
+              alt="Gooner Technologies Logo"
               className="brand__logo-img"
             />
             <span className="brand__divider" aria-hidden="true" />
-            <span className="brand__name">Gooner Technology</span>
+            <span className="brand__name">Gooner Technologies</span>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -153,8 +153,8 @@ export default function Navbar({ links }) {
       >
         <div className="mobile-drawer__header">
           <Link to="/" className="brand" onClick={() => setMobileMenuOpen(false)}>
-            <img src={goonerLogo} alt="Gooner Technology" className="brand__logo-img" />
-            <span className="brand__name">Gooner Technology</span>
+            <img src={goonerLogo} alt="Gooner Technologies" className="brand__logo-img" />
+            <span className="brand__name">Gooner Technologies</span>
           </Link>
           <button
             type="button"

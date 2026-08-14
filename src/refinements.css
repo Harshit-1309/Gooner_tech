@@ -313,16 +313,10 @@
 .final-cta-container {
   max-width: 900px;
   margin: 0 auto;
-  background: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 2rem;
   padding: 80px 40px;
   text-align: center;
   position: relative;
   z-index: 2;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 .final-cta-ambient-glow {
   position: absolute;
@@ -342,7 +336,7 @@
 }
 
 .final-cta-headline {
-  font-size: 3.5rem;
+  font-size: 2.25rem;
   font-weight: 800;
   margin-bottom: 24px;
   letter-spacing: -0.03em;

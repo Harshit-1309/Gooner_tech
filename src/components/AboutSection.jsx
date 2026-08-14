@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { Link } from 'react-router-dom';
 
 const DIFFERENTIATORS = [
   {
@@ -55,13 +56,13 @@ const DIFFERENTIATORS = [
 
 export default function AboutSection() {
   return (
-    <section id="why-us" className="why-gooner-section sticky-section-wrapper" aria-label="Why Gooner Technology">
+    <section id="why-us" className="why-gooner-section sticky-section-wrapper" aria-label="Why Gooner Technologies">
       <div className="why-ambient-glow why-ambient-glow--top" aria-hidden="true" />
       <div className="why-ambient-glow why-ambient-glow--bottom" aria-hidden="true" />
       
       <div style={{ display: 'flex', justifyContent: 'center', width: '100%', paddingTop: '40px' }}>
         <div className="why-divider__center-node">
-          <span>WHY GOONER TECHNOLOGY</span>
+          <span>WHY GOONER TECHNOLOGIES</span>
         </div>
       </div>
 
@@ -85,14 +86,14 @@ export default function AboutSection() {
         {/* RIGHT COLUMN: STICKY HEADING */}
         <div className="sticky-header-column">
           <div className="sticky-header-content">
-            <h2 className="sticky-main-title">Why Finance Leaders Choose Gooner Technology</h2>
+            <h2 className="sticky-main-title">Why Finance Leaders Choose Gooner Technologies</h2>
             <p className="sticky-main-desc">
               We combine deep finance expertise, enterprise technology, and AI-driven innovation to help
               organizations modernize planning, reporting, financial close, and operational efficiency.
             </p>
             <div className="sticky-actions">
-              <button className="sticky-btn sticky-btn--primary">BOOK CONSULTATION</button>
-              <button className="sticky-btn sticky-btn--secondary">QUESTIONS?</button>
+              <Link to="/contact-us" className="sticky-btn sticky-btn--primary" style={{ textDecoration: 'none' }}>Book Consultation</Link>
+              <Link to="/faqs" className="sticky-btn sticky-btn--secondary" style={{ textDecoration: 'none' }}>QUESTIONS?</Link>
             </div>
           </div>
         </div>

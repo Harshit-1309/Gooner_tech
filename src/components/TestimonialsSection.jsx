@@ -1,4 +1,5 @@
 import { useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const TESTIMONIALS = [
   {
@@ -71,7 +72,7 @@ export default function TestimonialsSection() {
             </div>
             <h2 className="testi-title">Trusted by Finance Leaders</h2>
             <p className="testi-subtitle">
-              Hear from organizations that have transformed their finance operations, planning cadence, and executive reporting with Gooner Technology.
+              Hear from organizations that have transformed their finance operations, planning cadence, and executive reporting with Gooner Technologies.
             </p>
           </div>
 
@@ -141,6 +142,29 @@ export default function TestimonialsSection() {
             </button>
           </div>
         </div>
+      </div>
+
+      <div style={{ textAlign: 'center', marginTop: '100px', paddingBottom: '40px' }}>
+        <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', color: '#f8fafc', fontWeight: '800', marginBottom: '32px', letterSpacing: '-0.02em' }}>
+          Ready to transform your planning and reporting?
+        </h2>
+        <Link to="/contact-us" className="testimonials-cta-btn" style={{ 
+          display: 'inline-flex', 
+          alignItems: 'center', 
+          gap: '8px', 
+          background: 'linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%)', 
+          color: '#ffffff', 
+          padding: '14px 32px', 
+          borderRadius: '100px', 
+          fontWeight: '600', 
+          textDecoration: 'none',
+          fontSize: '1.1rem',
+          boxShadow: '0 10px 25px -5px rgba(59, 130, 246, 0.4)',
+          transition: 'all 0.3s ease'
+        }}>
+          Talk to our experts
+          <span aria-hidden="true" style={{ transition: 'transform 0.3s ease' }}>→</span>
+        </Link>
       </div>
     </section>
   );

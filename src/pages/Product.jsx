@@ -265,7 +265,7 @@ export default function Product() {
                   Strategy to implementation. Implementation to optimization. We are with you at every step.
                 </p>
                 <Link to="/contact-us" className="bottom-partner__btn">
-                  Talk to a Finance Technology Expert &rarr;
+                  Talk to an expert &rarr;
                 </Link>
               </div>
             </div>

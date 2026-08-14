@@ -15,12 +15,12 @@ export default function TermsOfService() {
         
         <div className="legal-page__content">
           <p>
-            Welcome to Gooner Technology. By accessing our website, you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
+            Welcome to Gooner Technologies. By accessing our website, you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
           </p>
 
           <h2>1. Intellectual Property Rights</h2>
           <p>
-            Other than the content you own, under these Terms, Gooner Technology and/or its licensors own all the intellectual property rights and materials contained in this Website. You are granted a limited license only for purposes of viewing the material contained on this Website.
+            Other than the content you own, under these Terms, Gooner Technologies and/or its licensors own all the intellectual property rights and materials contained in this Website. You are granted a limited license only for purposes of viewing the material contained on this Website.
           </p>
 
           <h2>2. Restrictions</h2>
@@ -34,12 +34,12 @@ export default function TermsOfService() {
 
           <h2>3. No Warranties</h2>
           <p>
-            This Website is provided "as is," with all faults, and Gooner Technology express no representations or warranties, of any kind related to this Website or the materials contained on this Website.
+            This Website is provided "as is," with all faults, and Gooner Technologies express no representations or warranties, of any kind related to this Website or the materials contained on this Website.
           </p>
 
           <h2>4. Limitation of Liability</h2>
           <p>
-            In no event shall Gooner Technology, nor any of its officers, directors, and employees, be held liable for anything arising out of or in any way connected with your use of this Website.
+            In no event shall Gooner Technologies, nor any of its officers, directors, and employees, be held liable for anything arising out of or in any way connected with your use of this Website.
           </p>
 
           <h2>5. Governing Law & Jurisdiction</h2>
