@@ -8512,3 +8512,46 @@ body {
     width: 100%;
   }
 }
+
+/* About Us Page Navbar Golden Overrides at Top Section */
+.app-container--about .navbar-header:not(.is-scrolled) .brand__name {
+  color: #fbbf24;
+}
+
+.app-container--about .navbar-header:not(.is-scrolled) .brand__divider {
+  background: rgba(251, 191, 36, 0.4);
+}
+
+.app-container--about .navbar-header:not(.is-scrolled) .nav-link-standard {
+  color: rgba(251, 191, 36, 0.85);
+}
+
+.app-container--about .navbar-header:not(.is-scrolled) .nav-link-standard:hover {
+  color: #ffffff;
+}
+
+.app-container--about .navbar-header:not(.is-scrolled) .dropdown-arrow-icon {
+  color: rgba(251, 191, 36, 0.85);
+}
+
+.app-container--about .navbar-header:not(.is-scrolled) .nav-link-standard::after {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.5);
+}
+
+.app-container--about .navbar-header:not(.is-scrolled) .nav-btn-contact {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+.app-container--about .navbar-header:not(.is-scrolled) .nav-btn-contact:hover {
+  background: rgba(251, 191, 36, 0.22);
+  border-color: rgba(251, 191, 36, 0.8);
+  box-shadow: 0 0 24px rgba(251, 191, 36, 0.45);
+  color: #ffffff;
+}
+
+.app-container--about .navbar-header:not(.is-scrolled) .mobile-menu-toggle .hamburger-line {
+  background-color: #fbbf24;
+}
