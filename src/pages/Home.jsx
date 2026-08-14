@@ -17,6 +17,7 @@ export default function Home() {
       {/* 1. Hero Section with 3D Wave Canvas & Floating Particles */}
       <section className="hero" id="hero">
         <div className="hero__photo" aria-hidden="true" />
+        <div className="hero__ai-bg" aria-hidden="true" />
         <WaveCanvas />
         <Navbar />
         <HeroContent />
