@@ -8041,9 +8041,9 @@ body {
 
 .about-value-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  background: rgba(13, 30, 61, 0.2);
+  border-color: rgba(251, 191, 36, 0.45);
+  box-shadow: 0 15px 40px rgba(251, 191, 36, 0.25);
+  background: rgba(251, 191, 36, 0.08);
 }
 
 .about-value-card__icon-wrap {
@@ -8060,9 +8060,9 @@ body {
 }
 
 .about-value-card:hover .about-value-card__icon-wrap {
-  background: #3b82f6;
-  color: #ffffff;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+  background: #fbbf24;
+  color: #061022;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
 }
 
 .about-value-card__icon-wrap svg {
@@ -8217,67 +8217,6 @@ body {
   margin: 0 auto;
 }
 
-.about-values__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.about-value-card {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 30px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-}
-
-.about-value-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  background: rgba(13, 30, 61, 0.2);
-}
-
-.about-value-card__icon-wrap {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #60a5fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
-}
-
-.about-value-card:hover .about-value-card__icon-wrap {
-  background: #3b82f6;
-  color: #ffffff;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-}
-
-.about-value-card__icon-wrap svg {
-  width: 22px;
-  height: 22px;
-}
-
-.about-value-card__title {
-  font-family: var(--font-main);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.about-value-card__desc {
-  font-family: var(--font-main);
-  font-size: 0.85rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.7);
-}
 
 /* Partnership Journey Section */
 .about-journey-section {
