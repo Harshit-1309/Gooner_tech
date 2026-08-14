@@ -7,7 +7,7 @@ export default function Navbar({ links }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const defaultLinks = [
-    { label: 'Technology', href: '/product' },
+    { label: 'Technologies', href: '/product' },
     { 
       label: 'Services', 
       href: '/services/consulting',
