@@ -8,6 +8,7 @@ import ManagedServices from './pages/ManagedServices';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import SecurityCompliance from './pages/SecurityCompliance';
+import ImplementationServices from './pages/ImplementationServices';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/services/consulting" element={<ConsultingServices />} />
+        <Route path="/services/implementation" element={<ImplementationServices />} />
         <Route path="/services/managed" element={<ManagedServices />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
