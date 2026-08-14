@@ -7155,7 +7155,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
@@ -7186,11 +7186,27 @@ body {
   flex-grow: 1;
 }
 
-/* Flow list styles */
+/* Flow list styles (Horizontal Roadmap) */
 .impl-flow {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.impl-flow::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 6%;
+  right: 6%;
+  height: 2px;
+  background-image: linear-gradient(to right, #cbd5e1 50%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  z-index: 1;
 }
 
 .impl-flow__step-wrap {
@@ -7201,8 +7217,10 @@ body {
 
 .impl-flow__step {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
   z-index: 2;
 }
 
@@ -7210,20 +7228,22 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(12, 76, 176, 0.06);
-  border: 1px solid rgba(12, 76, 176, 0.1);
+  background: #ffffff;
+  border: 2px solid #0c4cb0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #0c4cb0;
   flex-shrink: 0;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(12, 76, 176, 0.08);
 }
 
 .impl-flow__step:hover .impl-flow__icon-wrap {
   background: #0c4cb0;
   color: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(12, 76, 176, 0.25);
 }
 
 .impl-flow__icon-wrap svg {
@@ -7234,6 +7254,7 @@ body {
 .impl-flow__details {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .impl-flow__title {
@@ -7243,23 +7264,26 @@ body {
   color: #0f172a;
   margin-bottom: 6px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .impl-flow__num {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   background: rgba(12, 76, 176, 0.08);
   color: #0c4cb0;
   padding: 2px 6px;
   border-radius: 4px;
+  font-weight: 800;
 }
 
 .impl-flow__desc {
   font-family: var(--font-main);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   line-height: 1.5;
   color: #475569;
+  max-width: 160px;
 }
 
 /* Tech cards styles */
@@ -7559,6 +7583,30 @@ body {
   }
   .impl-includes__grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .impl-flow {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .impl-flow::before {
+    display: none;
+  }
+  .impl-flow__step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+  .impl-flow__details {
+    align-items: flex-start;
+  }
+  .impl-flow__title {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  .impl-flow__desc {
+    max-width: 100%;
   }
   .impl-banner__top {
     flex-direction: column;

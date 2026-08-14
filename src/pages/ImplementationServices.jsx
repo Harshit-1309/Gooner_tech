@@ -160,68 +160,7 @@ export default function ImplementationServices() {
     }
   ];
 
-  const technologies = [
-    {
-      title: 'Planning & Budgeting',
-      platforms: 'PBCS | EPBCS | NSPB',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="18" y1="20" x2="18" y2="10"/>
-          <line x1="12" y1="20" x2="12" y2="4"/>
-          <line x1="6" y1="20" x2="6" y2="14"/>
-        </svg>
-      )
-    },
-    {
-      title: 'Financial Consolidation & Close',
-      platforms: 'FCCS',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 21h18M3 10h18M5 10v11M19 10v11M12 10v11M4 6l8-4 8 4M9 10v11M15 10v11"/>
-        </svg>
-      )
-    },
-    {
-      title: 'Account Reconciliation',
-      platforms: 'ARCS | NSAR',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="m9 12 2 2 4-4"/>
-        </svg>
-      )
-    },
-    {
-      title: 'Profitability & Cost Management',
-      platforms: 'PCMCS',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21.21 15.89A10 10 0 1 1 8 2.83M22 12A10 10 0 0 0 12 2v10z"/>
-        </svg>
-      )
-    },
-    {
-      title: 'BI & Analytics',
-      platforms: 'OAC | NSAW | Power BI',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <polyline points="12 6 12 12 16 14"/>
-        </svg>
-      )
-    },
-    {
-      title: 'AI & Automation',
-      platforms: 'AI Agents | Finance Automation | Intelligent Workflows | API & MCP',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-          <rect x="9" y="9" width="6" height="6"/>
-          <path d="M9 1v2M15 1v2M9 21v2M15 21v2M21 9h2M21 15h2M1 9h2M1 15h2"/>
-        </svg>
-      )
-    }
-  ];
+
 
   return (
     <main className="app-container">
@@ -300,27 +239,7 @@ export default function ImplementationServices() {
             </div>
           </div>
 
-          {/* Right Block: Technologies */}
-          <div className="impl-card impl-card--tech">
-            <div className="impl-card__header">
-              TECHNOLOGIES WE IMPLEMENT
-            </div>
-            <div className="impl-card__body">
-              <div className="impl-tech__grid">
-                {technologies.map((tech) => (
-                  <div key={tech.title} className="impl-tech-card">
-                    <div className="impl-tech-card__header">
-                      <div className="impl-tech-card__icon-wrap">
-                        {tech.icon}
-                      </div>
-                      <h4 className="impl-tech-card__title">{tech.title}</h4>
-                    </div>
-                    <p className="impl-tech-card__platforms">{tech.platforms}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+
 
         </div>
       </section>
