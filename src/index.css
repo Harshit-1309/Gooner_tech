@@ -8183,6 +8183,200 @@ body {
   box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.25);
 }
 
+.about-values__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-values__main-title {
+  font-family: var(--font-main);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.about-values__main-subtitle {
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.about-value-card {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-value-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(13, 30, 61, 0.2);
+}
+
+.about-value-card__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.about-value-card:hover .about-value-card__icon-wrap {
+  background: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.about-value-card__icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.about-value-card__title {
+  font-family: var(--font-main);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.about-value-card__desc {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Partnership Journey Section */
+.about-journey-section {
+  background: #081225;
+  padding: 90px 4%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-journey__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-journey__title {
+  font-family: var(--font-main);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.about-journey__subtitle {
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-journey__timeline {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-journey__item {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  min-height: 90px;
+}
+
+.about-journey__node-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.about-journey__node {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: #081225;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.about-journey__node-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.about-journey__line-segment {
+  width: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  top: 24px;
+  bottom: -20px;
+  left: 11px;
+  z-index: 1;
+}
+
+.about-journey__content {
+  padding-top: 2px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.about-journey__step-title {
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.about-journey__step-desc {
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Journey Active Step Styling */
+.about-journey__item--active .about-journey__node {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.25);
+}
+
 .about-journey__item--active .about-journey__node-inner {
   background: #3b82f6;
 }
@@ -8192,11 +8386,6 @@ body {
 }
 
 /* Our People Section */
-.about-people-section {
-  background: #061022;
-  padding: 90px 4% 120px;
-}
-
 .about-people__container {
   max-width: 1400px;
   margin: 0 auto;
@@ -8223,19 +8412,73 @@ body {
   margin: 0 auto;
 }
 
-.about-people__image-container {
-  max-width: 850px;
-  margin: 40px auto 0;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.about-people__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
 }
 
-.about-people__img {
+.about-people-card {
+  background: linear-gradient(135deg, #0d1e3d 0%, #061022 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-people-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about-people-card__image-wrap {
   width: 100%;
-  height: auto;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-people-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-people-card:hover .about-people-card__img {
+  transform: scale(1.05);
+}
+
+.about-people-card__content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.about-people-card__name {
+  font-family: var(--font-main);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.about-people-card__role {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
 }
 
 /* Responsive Media Queries */
@@ -8260,6 +8503,9 @@ body {
     gap: 30px;
   }
   .about-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-people__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -8290,5 +8536,8 @@ body {
   }
   .about-journey__item {
     gap: 20px;
+  }
+  .about-people__grid {
+    grid-template-columns: 1fr;
   }
 }

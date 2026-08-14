@@ -3,8 +3,40 @@ import Footer from '../components/Footer';
 
 // Importing assets
 import lobbyImg from '../assets/media__1786688741159.jpg';
-import teamImg from '../assets/media__1786628359175.jpg';
 import heroBg from '../assets/consulting_hero.png';
+
+const TEAM_MEMBERS = [
+  {
+    name: 'Andy Pieroux',
+    role: 'Founder & Managing Director',
+    image: '/assets/Our%20people/Andy%20Pieroux.jpeg'
+  },
+  {
+    name: 'Raju Singh',
+    role: 'Enterprise Performance Management (EPM) Lead',
+    image: '/assets/Our%20people/Raju%20Singh.jpeg'
+  },
+  {
+    name: 'Ekta Singh',
+    role: 'Finance Systems Architect',
+    image: '/assets/Our%20people/Ekta%20Singh.jpeg'
+  },
+  {
+    name: 'Zahir Shaikh',
+    role: 'NetSuite & ERP Solution Architect',
+    image: '/assets/Our%20people/Zahir%20Shaikh.jpeg'
+  },
+  {
+    name: 'Harshit Singh',
+    role: 'Lead Technology Architect',
+    image: '/assets/Our%20people/Harshit%20Singh.jpeg'
+  },
+  {
+    name: 'Soban Kuruvikar',
+    role: 'Lead Data Scientist & AI Engineer',
+    image: '/assets/Our%20people/Soban%20Kuruvikar.jpeg'
+  }
+];
 
 export default function AboutUs() {
   return (
@@ -290,8 +322,18 @@ export default function AboutUs() {
             </p>
           </div>
           
-          <div className="about-people__image-container">
-            <img src={teamImg} alt="Gooner Technology Team" className="about-people__img" />
+          <div className="about-people__grid">
+            {TEAM_MEMBERS.map((member) => (
+              <div key={member.name} className="about-people-card">
+                <div className="about-people-card__image-wrap">
+                  <img src={member.image} alt={member.name} className="about-people-card__img" />
+                </div>
+                <div className="about-people-card__content">
+                  <h3 className="about-people-card__name">{member.name}</h3>
+                  <span className="about-people-card__role">{member.role}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
