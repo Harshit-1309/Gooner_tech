@@ -164,9 +164,7 @@ export default function ImplementationServices() {
 
   return (
     <main className="app-container">
-      <div style={{ background: '#ffffff', position: 'relative', zIndex: 10 }}>
-        <Navbar />
-      </div>
+      <Navbar />
 
       {/* Picture-perfect Hero Section */}
       <section className="impl-hero" style={{ backgroundImage: `url(${implementationHeroBg})` }}>
