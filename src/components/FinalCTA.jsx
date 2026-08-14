@@ -5,18 +5,11 @@ export default function FinalCTA() {
       
       <div className="final-cta-container">
         <div className="final-cta-content">
-          <h2 className="final-cta-headline">Ready to Transform Your Finance Function?</h2>
-          <p className="final-cta-text">
-            From planning and forecasting to AI-powered automation, let's build a smarter, more connected finance operation.
-          </p>
+          <h2 className="final-cta-headline">Ready to transform your planning and reporting?</h2>
           
-          <div className="final-cta-actions">
+          <div className="final-cta-actions" style={{ marginTop: '2rem', justifyContent: 'center' }}>
             <a href="#contact-us" className="final-cta-btn final-cta-btn--primary">
-              <span>Schedule a Consultation</span>
-              <span className="final-cta-arrow" aria-hidden="true">→</span>
-            </a>
-            <a href="#solutions" className="final-cta-btn final-cta-btn--secondary">
-              <span>Explore Solutions</span>
+              <span>Talk to our experts</span>
               <span className="final-cta-arrow" aria-hidden="true">→</span>
             </a>
           </div>

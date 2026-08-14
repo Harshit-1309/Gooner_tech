@@ -5,10 +5,10 @@ import TrustedBy from '../components/TrustedBy';
 import ChallengesSolutions from '../components/ChallengesSolutions';
 import ProvenBusinessImpact from '../components/ProvenBusinessImpact';
 import AboutSection from '../components/AboutSection';
+import CaseStudiesSection from '../components/CaseStudiesSection';
+import FinalCTA from '../components/FinalCTA';
 
 import TestimonialsSection from '../components/TestimonialsSection';
-
-import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -34,11 +34,16 @@ export default function Home() {
 
       {/* 5. Why Choose Gooner Technology (Strategic Pillars & Credentials) */}
       <AboutSection />
+      
+      {/* 6. Case Studies */}
+      <CaseStudiesSection />
+
+      {/* 7. Final CTA */}
+      <FinalCTA />
+
       {/* 8. Client Testimonials (Enterprise CFO & Finance Leader Experiences) */}
       <TestimonialsSection />
 
-      {/* 8. Interactive Demo & Assessment Request Section */}
-      <ContactSection />
 
       {/* 9. Comprehensive Enterprise Footer */}
       <Footer />

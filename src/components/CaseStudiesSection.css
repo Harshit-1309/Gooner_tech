@@ -1,0 +1,426 @@
+/* ==========================================================================
+   Case Studies Section
+   ========================================================================== */
+.casestudy-section {
+  position: relative;
+  padding: 8rem 2rem;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-tertiary) 15%, var(--bg-tertiary) 85%, var(--bg-secondary) 100%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.casestudy-ambient-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.casestudy-ambient-glow--top {
+  top: -200px;
+  left: -200px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+}
+
+.casestudy-ambient-glow--bottom {
+  bottom: -200px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+}
+
+.casestudy-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.casestudy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.casestudy-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.casestudy-card:hover {
+  transform: translateY(-8px);
+  border-color: #cbd5e1;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.casestudy-card__spotlight {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(59, 130, 246, 0.04),
+    transparent 40%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.casestudy-card:hover .casestudy-card__spotlight {
+  opacity: 1;
+}
+
+.casestudy-card__header {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.casestudy-card__header-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  box-shadow: 0 0 20px 2px currentColor;
+  opacity: 0.5;
+}
+
+.casestudy-company {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.casestudy-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  opacity: 0.95;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #334155;
+}
+
+.casestudy-card__body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  background: #ffffff;
+}
+
+.casestudy-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.casestudy-block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.casestudy-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.casestudy-icon-challenge { stroke: #f59e0b; } /* Amber */
+.casestudy-icon-solution { stroke: #3b82f6; } /* Blue */
+.casestudy-icon-outcome { stroke: #10b981; } /* Emerald */
+
+.casestudy-block-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  padding-left: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .casestudy-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .casestudy-section {
+    padding: 5rem 1rem;
+  }
+  .casestudy-card__body {
+    padding: 1.5rem;
+  }
+  .casestudy-block-text {
+    padding-left: 0;
+  }
+  .casestudy-outcome-list {
+    padding-left: 0;
+  }
+}
+
+/* ==========================================================================
+   Extended Styles for New Data Structure
+   ========================================================================== */
+.casestudy-grid--extended {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.casestudy-industry-badge {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  white-space: nowrap;
+  margin-bottom: 0.75rem;
+}
+
+.casestudy-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.casestudy-block--flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.casestudy-block-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.casestudy-outcome-list {
+  list-style: none;
+  padding-left: 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.casestudy-outcome-list li {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.casestudy-bullet {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.casestudy-quote-block {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border-left: 4px solid #3b82f6;
+  position: relative;
+}
+
+.casestudy-quote-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 3rem;
+  color: rgba(59, 130, 246, 0.2);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.casestudy-quote-text {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #334155;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Expandable Card Styles --- */
+.casestudy-expand-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px dashed rgba(59, 130, 246, 0.3);
+  border-radius: 0.75rem;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.casestudy-expand-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-style: solid;
+}
+
+/* --- Modal Styles --- */
+.casestudy-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: modalFadeIn 0.15s ease-out forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.casestudy-modal-content {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  width: 95vw;
+  max-width: 1400px;
+  max-height: 95vh;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  animation: modalSlideUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  overflow: hidden;
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.casestudy-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.casestudy-modal-close:hover {
+  background: #cbd5e1;
+  color: #0f172a;
+}
+
+.casestudy-modal-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.casestudy-modal-header {
+  padding: 3.5rem 3rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.casestudy-modal-body {
+  padding: 2.5rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  overflow-y: auto;
+}
+
+.casestudy-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* Custom scrollbar for modal body */
+.casestudy-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.casestudy-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 1rem 0;
+}
+.casestudy-modal-body::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+.casestudy-modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+@media (max-width: 1024px) {
+  .casestudy-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .casestudy-modal-overlay { padding: 1rem; }
+  .casestudy-modal-header, .casestudy-modal-body { padding: 2rem 1.5rem; }
+}
