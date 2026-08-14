@@ -181,18 +181,18 @@ body {
   pointer-events: none;
   z-index: 1;
   transform-origin: center center;
-  animation: slowPanZoom 36s ease-in-out infinite;
+  animation: slowPanZoom 22s ease-in-out infinite;
 }
 
 @keyframes slowPanZoom {
   0% {
-    transform: scale(1.02) translate(0, 0) rotate(0deg);
+    transform: scale(1.05) translate(0, 0) rotate(-1deg);
   }
   50% {
-    transform: scale(1.08) translate(-1%, -1.5%) rotate(1deg);
+    transform: scale(1.22) translate(-3%, -2.5%) rotate(2deg);
   }
   100% {
-    transform: scale(1.02) translate(0, 0) rotate(0deg);
+    transform: scale(1.05) translate(0, 0) rotate(-1deg);
   }
 }
 
