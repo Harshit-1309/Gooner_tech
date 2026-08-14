@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -38,7 +39,39 @@ const TEAM_MEMBERS = [
   }
 ];
 
+const JOURNEY_STEPS = [
+  {
+    title: 'Consult',
+    desc: 'Deep architecture review and strategic alignment.'
+  },
+  {
+    title: 'Implement',
+    desc: 'Precision deployment of core financial technologies.'
+  },
+  {
+    title: 'Integrate',
+    desc: 'Connecting disparate systems into a unified data ecosystem.'
+  },
+  {
+    title: 'Manage',
+    desc: 'Ongoing operational support and system health monitoring.'
+  },
+  {
+    title: 'Optimize',
+    desc: 'Continuous refinement and performance enhancement.'
+  }
+];
+
 export default function AboutUs() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % JOURNEY_STEPS.length);
+    }, 3000); // Shift active step every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <main className="app-container app-container--about">
       {/* Transparent Global Navbar Header */}
@@ -230,84 +263,23 @@ export default function AboutUs() {
           </p>
 
           <div className="about-journey__timeline">
-            {/* Timeline Item 1 */}
-            <div className="about-journey__item about-journey__item--active">
-              <div className="about-journey__node-wrap">
-                <div className="about-journey__node">
-                  <div className="about-journey__node-inner" />
+            {JOURNEY_STEPS.map((step, index) => (
+              <div
+                key={step.title}
+                className={`about-journey__item ${activeIndex === index ? 'about-journey__item--active' : ''}`}
+              >
+                <div className="about-journey__node-wrap">
+                  <div className="about-journey__node">
+                    <div className="about-journey__node-inner" />
+                  </div>
+                  {index < JOURNEY_STEPS.length - 1 && <div className="about-journey__line-segment" />}
                 </div>
-                <div className="about-journey__line-segment" />
-              </div>
-              <div className="about-journey__content">
-                <h3 className="about-journey__step-title">Consult</h3>
-                <p className="about-journey__step-desc">
-                  Deep architecture review and strategic alignment.
-                </p>
-              </div>
-            </div>
-
-            {/* Timeline Item 2 */}
-            <div className="about-journey__item">
-              <div className="about-journey__node-wrap">
-                <div className="about-journey__node">
-                  <div className="about-journey__node-inner" />
-                </div>
-                <div className="about-journey__line-segment" />
-              </div>
-              <div className="about-journey__content">
-                <h3 className="about-journey__step-title">Implement</h3>
-                <p className="about-journey__step-desc">
-                  Precision deployment of core financial technologies.
-                </p>
-              </div>
-            </div>
-
-            {/* Timeline Item 3 */}
-            <div className="about-journey__item">
-              <div className="about-journey__node-wrap">
-                <div className="about-journey__node">
-                  <div className="about-journey__node-inner" />
-                </div>
-                <div className="about-journey__line-segment" />
-              </div>
-              <div className="about-journey__content">
-                <h3 className="about-journey__step-title">Integrate</h3>
-                <p className="about-journey__step-desc">
-                  Connecting disparate systems into a unified data ecosystem.
-                </p>
-              </div>
-            </div>
-
-            {/* Timeline Item 4 */}
-            <div className="about-journey__item">
-              <div className="about-journey__node-wrap">
-                <div className="about-journey__node">
-                  <div className="about-journey__node-inner" />
-                </div>
-                <div className="about-journey__line-segment" />
-              </div>
-              <div className="about-journey__content">
-                <h3 className="about-journey__step-title">Manage</h3>
-                <p className="about-journey__step-desc">
-                  Ongoing operational support and system health monitoring.
-                </p>
-              </div>
-            </div>
-
-            {/* Timeline Item 5 */}
-            <div className="about-journey__item">
-              <div className="about-journey__node-wrap">
-                <div className="about-journey__node">
-                  <div className="about-journey__node-inner" />
+                <div className="about-journey__content">
+                  <h3 className="about-journey__step-title">{step.title}</h3>
+                  <p className="about-journey__step-desc">{step.desc}</p>
                 </div>
               </div>
-              <div className="about-journey__content">
-                <h3 className="about-journey__step-title">Optimize</h3>
-                <p className="about-journey__step-desc">
-                  Continuous refinement and performance enhancement.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
