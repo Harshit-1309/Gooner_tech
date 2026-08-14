@@ -7069,9 +7069,9 @@ body {
 
 /* Includes grid box */
 .impl-includes-section {
-  background: #ffffff;
+  background: #0b1528;
   padding: 60px 4%;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .impl-includes__container {
@@ -7080,11 +7080,11 @@ body {
 }
 
 .impl-includes-box {
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 40px;
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  background: linear-gradient(135deg, #0d1e3d 0%, #061022 100%);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .impl-includes__header {
@@ -7092,7 +7092,7 @@ body {
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: #475569;
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -7115,20 +7115,20 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(12, 76, 176, 0.05);
-  border: 1.5px solid rgba(12, 76, 176, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0c4cb0;
+  color: #3b82f6;
   transition: all 0.3s ease;
 }
 
 .impl-include-card:hover .impl-include-card__icon-wrap {
-  background: #0c4cb0;
+  background: #3b82f6;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(12, 76, 176, 0.2);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
 }
 
 .impl-include-card__icon-wrap svg {
@@ -7140,7 +7140,7 @@ body {
   font-family: var(--font-main);
   font-size: 0.8rem;
   font-weight: 750;
-  color: #0f172a;
+  color: #ffffff;
   line-height: 1.35;
 }
 
