@@ -7286,6 +7286,112 @@ body {
   max-width: 160px;
 }
 
+/* Serpentine desktop styles */
+.impl-serpentine-desktop {
+  display: block;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.impl-serpentine__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.impl-serpentine__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.impl-serpentine__step {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 130px;
+}
+
+.impl-serpentine__title {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.impl-serpentine__step--discover .impl-serpentine__title,
+.impl-serpentine__step--build .impl-serpentine__title,
+.impl-serpentine__step--deploy .impl-serpentine__title,
+.impl-serpentine__step--transition .impl-serpentine__title {
+  color: #0f172a;
+}
+
+.impl-serpentine__step--design .impl-serpentine__title,
+.impl-serpentine__step--validate .impl-serpentine__title,
+.impl-serpentine__step--enable .impl-serpentine__title {
+  color: #3b82f6;
+}
+
+.impl-serpentine__desc {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #475569;
+}
+
+.impl-serpentine__step--discover {
+  left: 10.87%;
+  top: 25%;
+}
+
+.impl-serpentine__step--design {
+  left: 23.91%;
+  top: 75%;
+}
+
+.impl-serpentine__step--build {
+  left: 36.96%;
+  top: 25%;
+}
+
+.impl-serpentine__step--validate {
+  left: 50.00%;
+  top: 75%;
+}
+
+.impl-serpentine__step--deploy {
+  left: 63.04%;
+  top: 25%;
+}
+
+.impl-serpentine__step--enable {
+  left: 76.09%;
+  top: 75%;
+}
+
+.impl-serpentine__step--transition {
+  left: 89.13%;
+  top: 25%;
+}
+
+.impl-serpentine-mobile {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .impl-serpentine-desktop {
+    display: none;
+  }
+  .impl-serpentine-mobile {
+    display: block;
+  }
+}
+
+
 /* Tech cards styles */
 .impl-tech__grid {
   display: grid;

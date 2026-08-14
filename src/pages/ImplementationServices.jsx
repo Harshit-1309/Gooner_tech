@@ -219,22 +219,100 @@ export default function ImplementationServices() {
               OUR IMPLEMENTATION APPROACH
             </div>
             <div className="impl-card__body">
-              <div className="impl-flow">
-                {implementationApproach.map((step) => (
-                  <div key={step.title} className="impl-flow__step-wrap">
-                    <div className="impl-flow__step">
-                      <div className="impl-flow__icon-wrap">
-                        {step.icon}
-                      </div>
-                      <div className="impl-flow__details">
-                        <h4 className="impl-flow__title">
-                          <span className="impl-flow__num">{step.num}</span> {step.title}
-                        </h4>
-                        <p className="impl-flow__desc">{step.desc}</p>
+              {/* Desktop Serpentine Snake Timeline (7 steps) */}
+              <div className="impl-serpentine-desktop">
+                <div className="impl-serpentine__wrapper">
+                  <svg className="impl-serpentine__svg" viewBox="0 0 920 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Serpentine Connecting Path (7 turns) */}
+                    <path
+                      d="M 40,200 L 40,100 Q 40,50 80,50 L 120,50 Q 160,50 160,100 L 160,300 Q 160,350 200,350 L 240,350 Q 280,350 280,300 L 280,100 Q 280,50 320,50 L 360,50 Q 400,50 400,100 L 400,300 Q 400,350 440,350 L 480,350 Q 520,350 520,300 L 520,100 Q 520,50 560,50 L 600,50 Q 640,50 640,100 L 640,300 Q 640,350 680,350 L 720,350 Q 760,350 760,300 L 760,100 Q 760,50 800,50 L 840,50 Q 880,50 880,100 L 880,200"
+                      stroke="#0c4cb0"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                    />
+
+                    {/* Start dot */}
+                    <circle cx="40" cy="200" r="10" fill="#0c4cb0" />
+
+                    {/* End dot */}
+                    <circle cx="880" cy="200" r="10" fill="#0c4cb0" />
+
+                    {/* Down arrow 1 */}
+                    <path d="M 152,190 L 160,205 L 168,190" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+
+                    {/* Up arrow 1 */}
+                    <path d="M 272,210 L 280,195 L 288,210" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+
+                    {/* Down arrow 2 */}
+                    <path d="M 392,190 L 400,205 L 408,190" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+
+                    {/* Up arrow 2 */}
+                    <path d="M 512,210 L 520,195 L 528,210" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+
+                    {/* Down arrow 3 */}
+                    <path d="M 632,190 L 640,205 L 648,190" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+
+                    {/* Up arrow 3 */}
+                    <path d="M 752,210 L 760,195 L 768,210" stroke="#0c4cb0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+
+                  {/* Serpentine Step Details Overlays */}
+                  <div className="impl-serpentine__step impl-serpentine__step--discover">
+                    <h4 className="impl-serpentine__title">Discover</h4>
+                    <p className="impl-serpentine__desc">Understand business, processes, systems and requirements.</p>
+                  </div>
+
+                  <div className="impl-serpentine__step impl-serpentine__step--design">
+                    <h4 className="impl-serpentine__title">Design</h4>
+                    <p className="impl-serpentine__desc">Create solution architecture, workflows, integrations and roadmap.</p>
+                  </div>
+
+                  <div className="impl-serpentine__step impl-serpentine__step--build">
+                    <h4 className="impl-serpentine__title">Build</h4>
+                    <p className="impl-serpentine__desc">Configure, develop custom features, integrate systems & migrate data.</p>
+                  </div>
+
+                  <div className="impl-serpentine__step impl-serpentine__step--validate">
+                    <h4 className="impl-serpentine__title">Validate</h4>
+                    <p className="impl-serpentine__desc">Perform testing, reconciliations and user acceptance testing.</p>
+                  </div>
+
+                  <div className="impl-serpentine__step impl-serpentine__step--deploy">
+                    <h4 className="impl-serpentine__title">Deploy</h4>
+                    <p className="impl-serpentine__desc">Deploy to production, complete cutover and ensure a smooth go-live.</p>
+                  </div>
+
+                  <div className="impl-serpentine__step impl-serpentine__step--enable">
+                    <h4 className="impl-serpentine__title">Enable</h4>
+                    <p className="impl-serpentine__desc">Train users and administrators. Transfer knowledge & documentation.</p>
+                  </div>
+
+                  <div className="impl-serpentine__step impl-serpentine__step--transition">
+                    <h4 className="impl-serpentine__title">Transition</h4>
+                    <p className="impl-serpentine__desc">Transition to support and managed services for continuous success.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Vertical Timeline */}
+              <div className="impl-serpentine-mobile">
+                <div className="impl-flow">
+                  {implementationApproach.map((step) => (
+                    <div key={step.title} className="impl-flow__step-wrap">
+                      <div className="impl-flow__step">
+                        <div className="impl-flow__icon-wrap">
+                          {step.icon}
+                        </div>
+                        <div className="impl-flow__details">
+                          <h4 className="impl-flow__title">
+                            <span className="impl-flow__num">{step.num}</span> {step.title}
+                          </h4>
+                          <p className="impl-flow__desc">{step.desc}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
