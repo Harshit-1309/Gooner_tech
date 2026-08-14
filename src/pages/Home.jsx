@@ -1,5 +1,4 @@
 import Navbar from '../components/Navbar';
-import WaveCanvas from '../components/WaveCanvas';
 import HeroContent from '../components/HeroContent';
 import TrustedBy from '../components/TrustedBy';
 import ChallengesSolutions from '../components/ChallengesSolutions';
@@ -14,11 +13,10 @@ import Footer from '../components/Footer';
 export default function Home() {
   return (
     <main className="app-container">
-      {/* 1. Hero Section with 3D Wave Canvas & Floating Particles */}
+      {/* 1. Hero Section with Floating Particles */}
       <section className="hero" id="hero">
         <div className="hero__photo" aria-hidden="true" />
         <div className="hero__ai-bg" aria-hidden="true" />
-        <WaveCanvas />
         <Navbar />
         <HeroContent />
       </section>
