@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 // Importing assets
-import lobbyImg from '../assets/media__1786625922788.jpg';
+import lobbyImg from '../assets/media__1786688741159.jpg';
 import teamImg from '../assets/media__1786628359175.jpg';
 import heroBg from '../assets/consulting_hero.png';
 
