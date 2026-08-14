@@ -6999,6 +6999,17 @@ body {
   align-items: center;
 }
 
+.impl-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #0d1e3d 30%, rgba(13, 30, 61, 0.6) 60%, rgba(13, 30, 61, 0) 100%);
+  z-index: 1;
+}
+
 .impl-hero__container {
   display: flex;
   flex-direction: column;
@@ -7006,6 +7017,8 @@ body {
   margin: 0 auto;
   width: 100%;
   padding: 0 4%;
+  position: relative;
+  z-index: 2;
 }
 
 .impl-hero__left {
@@ -7731,7 +7744,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, #0d1e3d 40%, rgba(13, 30, 61, 0.4) 100%);
+  background: linear-gradient(90deg, #0d1e3d 30%, rgba(13, 30, 61, 0.6) 60%, rgba(13, 30, 61, 0) 100%);
   z-index: 1;
 }
 
