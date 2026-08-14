@@ -8426,13 +8426,17 @@ body {
 }
 
 .about-people__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin-top: 50px;
 }
 
 .about-people-card {
+  width: calc(33.333% - 20px);
+  min-width: 280px;
+  max-width: 380px;
   background: linear-gradient(135deg, #0d1e3d 0%, #061022 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
@@ -8518,8 +8522,8 @@ body {
   .about-values__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .about-people__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about-people-card {
+    width: calc(50% - 20px);
   }
 }
 
@@ -8550,7 +8554,7 @@ body {
   .about-journey__item {
     gap: 20px;
   }
-  .about-people__grid {
-    grid-template-columns: 1fr;
+  .about-people-card {
+    width: 100%;
   }
 }
