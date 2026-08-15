@@ -180,6 +180,12 @@ export default function ChallengesSolutions() {
       id="challenges"
       className="challenges-solutions-section"
       aria-label="Business Challenges and How We Solve Them"
+      style={{
+        backgroundImage: `linear-gradient(rgba(6, 16, 34, 0.55), rgba(6, 16, 34, 0.65)), url(${challengesPhoto})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
     >
       {/* Background ambient lighting */}
       <div className="cs-ambient-glow cs-ambient-glow--left" aria-hidden="true" />
