@@ -1,6 +1,5 @@
 import { useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import challengesPhoto from '../assets/challenges_photo.jpg';
 
 const DIFFERENTIATORS = [
   {
@@ -86,17 +85,7 @@ export default function AboutSection() {
 
         {/* RIGHT COLUMN: STICKY HEADING */}
         <div className="sticky-header-column">
-          <div
-            className="sticky-header-content"
-            style={{
-              backgroundImage: `linear-gradient(rgba(6, 16, 34, 0.65), rgba(6, 16, 34, 0.75)), url(${challengesPhoto})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              borderRadius: '16px',
-              padding: '40px 36px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
-            }}
-          >
+          <div className="sticky-header-content">
             <h2 className="sticky-main-title">Why Finance Leaders Choose Gooner Technologies</h2>
             <p className="sticky-main-desc">
               We combine deep finance expertise, enterprise technology, and AI-driven innovation to help
