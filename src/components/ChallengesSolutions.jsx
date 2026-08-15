@@ -202,17 +202,6 @@ export default function ChallengesSolutions() {
               Modern finance leaders should spend less time managing spreadsheets and manual processes, and more time
               driving strategic growth. We eliminate operational bottlenecks through intelligent finance transformation.
             </p>
-            <img
-              src={challengesPhoto}
-              alt="Finance professional analyzing data on multiple screens"
-              style={{
-                width: '100%',
-                marginTop: '30px',
-                borderRadius: '12px',
-                boxShadow: '0 8px 30px rgba(0, 0, 0, 0.4)',
-                display: 'block'
-              }}
-            />
           </div>
         </div>
 

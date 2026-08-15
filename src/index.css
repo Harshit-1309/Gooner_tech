@@ -1169,7 +1169,10 @@ body {
 .challenges-solutions-section {
   position: relative;
   width: 100%;
-  background: var(--bg-dark);
+  background: linear-gradient(rgba(6, 16, 34, 0.88), rgba(6, 16, 34, 0.92)), url('./assets/challenges_photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 100px 2rem 120px;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
