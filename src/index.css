@@ -8408,9 +8408,9 @@ body {
 }
 
 .about-people-card {
-  width: calc(33.333% - 20px);
-  min-width: 280px;
-  max-width: 380px;
+  width: calc(26.666% - 20px);
+  min-width: 224px;
+  max-width: 304px;
   background: linear-gradient(135deg, #0d1e3d 0%, #061022 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
