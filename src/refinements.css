@@ -1418,4 +1418,13 @@ span.brand__name--technologies,
   background-color: #f1f5f9 !important;
 }
 
+/* =========================================================
+   FOOTER COLUMN EQUAL WIDTH ALIGNMENT
+   ========================================================= */
+@media (min-width: 992px) {
+  .footer__main-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
 
