@@ -1545,4 +1545,17 @@ span.brand__name--technologies,
   height: 480px !important;
 }
 
+/* =========================================================
+   ABOUT US MISSION AND VISION GOLDEN YELLOW STYLES
+   ========================================================= */
+.about-mission-card__title,
+.about-mission-card__bullets li,
+.about-mission-card__text {
+  color: #fbbf24 !important;
+}
+
+.about-mission-card__bullets li .bullet-arrow {
+  color: #fbbf24 !important;
+}
+
 
