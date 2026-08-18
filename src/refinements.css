@@ -1445,7 +1445,7 @@ span.brand__name--technologies,
 .picture-hero__container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 4% !important;
   display: flex;
   align-items: center;
   width: 100%;
@@ -1453,7 +1453,7 @@ span.brand__name--technologies,
 
 .picture-hero__left {
   flex: 1.2 !important;
-  padding: 40px 40px 40px 0 !important;
+  padding: 40px 2% 40px 0 !important;
 }
 
 .picture-hero__right {
