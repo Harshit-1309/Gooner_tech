@@ -1438,11 +1438,8 @@ span.brand__name--technologies,
 .picture-hero {
   display: flex !important;
   min-height: 520px !important;
-  background-color: #f1f5f9 !important;
-  background-size: contain !important;
-  background-position: right bottom !important;
-  background-repeat: no-repeat !important;
   padding: 130px 0 40px !important;
+  background-color: #f1f5f9 !important;
   position: relative !important;
   align-items: center !important;
 }
@@ -1457,17 +1454,31 @@ span.brand__name--technologies,
 }
 
 .picture-hero__left {
-  flex: 0 0 55% !important;
-  max-width: 55% !important;
-  padding: 20px 2% 20px 0 !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 2;
+  flex: 1 !important;
+  padding: 40px 4% 40px 0 !important;
 }
 
-.picture-hero__spacer {
-  flex: 1;
+.picture-hero__right {
+  flex: 1 !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  align-self: stretch !important;
+  padding-right: 0 !important;
+}
+
+.picture-hero__img-mask {
+  width: 100% !important;
+  height: 480px !important;
+  overflow: hidden !important;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%) !important;
+  background: #f1f5f9 !important;
+}
+
+.picture-hero__img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 
 /* =========================================================

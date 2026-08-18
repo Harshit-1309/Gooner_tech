@@ -143,7 +143,7 @@ export default function ConsultingServices() {
       </div>
 
       {/* Picture-perfect Hero Section */}
-      <section className="picture-hero" style={{ backgroundImage: "url('/assets/Consultingservices.png')" }}>
+      <section className="picture-hero">
         <div className="picture-hero__container">
           <div className="picture-hero__left">
             <div className="picture-hero__eyebrow-wrap">
@@ -159,7 +159,15 @@ export default function ConsultingServices() {
               Gooner Technologies helps finance teams transform complex challenges into scalable, technology-driven solutions. Our consultants combine finance expertise with deep experience in Oracle EPM, NetSuite, automation, integrations, and AI to deliver measurable results.
             </p>
           </div>
-          <div className="picture-hero__spacer" />
+          <div className="picture-hero__right">
+            <div className="picture-hero__img-mask">
+              <img
+                src="/assets/Consultingservices.png"
+                alt="Finance Transformation Roadmap presentation"
+                className="picture-hero__img"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
