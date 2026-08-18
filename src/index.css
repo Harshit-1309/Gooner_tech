@@ -47,6 +47,7 @@
 html {
   scroll-behavior: smooth;
   height: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -60,6 +61,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-white);
+}
+
+#root, .app-container {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 #root {
@@ -1032,7 +1038,7 @@ body {
 
 .marquee-container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   overflow: hidden;
   display: flex;
@@ -6865,15 +6871,15 @@ body {
 }
 
 .app-container:has(.prod-hero) .navbar-header .nav-btn-contact {
-  border-color: rgba(15, 23, 42, 0.15) !important;
-  background: rgba(15, 23, 42, 0.05) !important;
-  color: #0f172a !important;
-}
-
-.app-container:has(.prod-hero) .navbar-header .nav-btn-contact:hover {
   background: var(--blue-primary) !important;
   color: #ffffff !important;
   border-color: var(--blue-primary) !important;
+}
+
+.app-container:has(.prod-hero) .navbar-header .nav-btn-contact:hover {
+  background: #093985 !important;
+  color: #ffffff !important;
+  border-color: #093985 !important;
 }
 
 .app-container:has(.prod-hero) .navbar-header .mobile-menu-toggle .hamburger-line {
@@ -8408,55 +8414,100 @@ body {
   margin-right: auto;
 }
 
-.about-people-card {
+.about-people-card--3d {
   width: 100%;
-  background: linear-gradient(135deg, #0d1e3d 0%, #061022 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 40px;
 }
 
-.about-people-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.about-people-card__image-wrap {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+.about-people-card__avatar-container {
+  width: 220px;
+  height: 220px;
   position: relative;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-.about-people-card__img {
+.about-people-card__inner-circle {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #fbcfe8 0%, #fecdd3 100%);
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.about-people-card__decorative-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
-  transition: transform 0.5s ease;
+  z-index: 2;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: visible;
+  pointer-events: none;
 }
 
-.about-people-card:hover .about-people-card__img {
-  transform: scale(1.05);
+.about-people-card__avatar-img {
+  position: relative;
+  width: 170px;
+  height: 200px;
+  object-fit: contain;
+  object-position: bottom center;
+  z-index: 3;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.6s ease;
+  transform-origin: bottom center;
+  /* Multiple drop-shadows to create a solid white outline, plus the bottom black shadow */
+  filter: 
+    drop-shadow(1.5px 0 0 white) 
+    drop-shadow(-1.5px 0 0 white) 
+    drop-shadow(0 1.5px 0 white) 
+    drop-shadow(0 -1.5px 0 white)
+    drop-shadow(0 10px 15px rgba(0,0,0,0.3));
 }
 
-.about-people-card__content {
-  padding: 24px;
+/* Hover effects */
+.about-people-card--3d:hover .about-people-card__avatar-img {
+  transform: scale(1.15) translateY(-8px);
+  filter: 
+    drop-shadow(1.5px 0 0 white) 
+    drop-shadow(-1.5px 0 0 white) 
+    drop-shadow(0 1.5px 0 white) 
+    drop-shadow(0 -1.5px 0 white)
+    drop-shadow(0 20px 25px rgba(0,0,0,0.4));
+}
+
+.about-people-card--3d:hover .about-people-card__inner-circle {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.about-people-card--3d:hover .about-people-card__decorative-ring {
+  transform: rotate(15deg) scale(1.02);
+}
+
+.about-people-card__info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  flex-grow: 1;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
 }
 
 .about-people-card__name {
   font-family: var(--font-main);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #ffffff;
 }
@@ -8468,7 +8519,23 @@ body {
   color: #60a5fa;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.about-people-card__linkedin {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.about-people-card__linkedin:hover {
+  color: #0a66c2;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Media Queries */
@@ -8573,4 +8640,65 @@ body {
 
 .app-container--about .navbar-header:not(.is-scrolled) .mobile-menu-toggle .hamburger-line {
   background-color: #fbbf24;
+}
+
+/* =========================================================
+   GLOBAL MOBILE RESPONSIVE OVERRIDES
+   ========================================================= */
+@media (max-width: 768px) {
+  /* 1. Global Spacing & Layout */
+  section, .main-content, .footer, .navbar {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* 2. Typography Scaling */
+  h1 { font-size: 2.2rem !important; line-height: 1.2 !important; }
+  h2 { font-size: 1.8rem !important; line-height: 1.3 !important; }
+  h3 { font-size: 1.4rem !important; line-height: 1.4 !important; }
+  
+  /* 3. Hero Sections Shrink */
+  .hero-section, .prod-hero, .about-hero, .contact-hero, .services-hero, .hero {
+    min-height: auto !important;
+    padding: 120px 5% 60px !important;
+  }
+  
+  /* 4. Force Grids to Single Column */
+  .grid, .grid-container, 
+  [class*="-grid"], [class*="__grid"], [class*="--grid"],
+  .prod-compare__container, .about-mission__container, 
+  .expertise-col, .kpi-container, .features-wrap,
+  .footer-links-grid, .footer-top, .footer-bottom,
+  .about-people-list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    width: 100% !important;
+  }
+  
+  /* 5. Force specific flex rows to column */
+  .prod-hero__top-row, .about-intro__grid, .split-section,
+  .footer-top, .nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  /* 6. Specific Component Fixes */
+  .about-intro__image-wrap, .about-intro__img {
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+  
+  .about-people-card {
+    margin: 0 auto !important;
+  }
+
+  .nav-btn-contact {
+    margin-top: 16px;
+    width: 100%;
+    justify-content: center;
+  }
 }

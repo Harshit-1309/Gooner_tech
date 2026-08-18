@@ -3,64 +3,26 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 // Importing assets
-import lobbyImg from '../assets/media__1786688741159.jpg';
+import lobbyImg from '../assets/media__1786688741159-DC4jKMT6.png';
 import heroBg from '../assets/consulting_hero.png';
 
-const TEAM_MEMBERS = [
-  {
-    name: 'Soban Kuruvikar',
-    role: 'Co founder',
-    image: '/assets/Our%20people/Soban%20Kuruvikar.jpeg'
-  },
-  {
-    name: 'Raju Singh',
-    role: 'Co founder',
-    image: '/assets/Our%20people/Raju%20Singh.jpeg'
-  },
-  {
-    name: 'Andy Pieroux',
-    role: 'Mentor',
-    image: '/assets/Our%20people/Andy%20Pieroux.jpeg'
-  },
-  {
-    name: 'Zahir Shaikh',
-    role: 'EPM Practice Head',
-    image: '/assets/Our%20people/Zahir%20Shaikh.jpeg'
-  },
-  {
-    name: 'Ekta Singh',
-    role: 'Senior Consultant',
-    image: '/assets/Our%20people/Ekta%20Singh.jpeg'
-  },
-  {
-    name: 'Harshit Singh',
-    role: 'Consultant',
-    image: '/assets/Our%20people/Harshit%20Singh.jpeg'
-  }
-];
+import { TEAM_MEMBERS, JOURNEY_STEPS } from '../data/aboutData';
 
-const JOURNEY_STEPS = [
-  {
-    title: 'Consult',
-    desc: 'Deep architecture review and strategic alignment.'
-  },
-  {
-    title: 'Implement',
-    desc: 'Precision deployment of core financial technologies.'
-  },
-  {
-    title: 'Integrate',
-    desc: 'Connecting disparate systems into a unified data ecosystem.'
-  },
-  {
-    title: 'Manage',
-    desc: 'Ongoing operational support and system health monitoring.'
-  },
-  {
-    title: 'Optimize',
-    desc: 'Continuous refinement and performance enhancement.'
-  }
-];
+const DecorativeRing = () => (
+  <svg className="about-people-card__decorative-ring" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="90" stroke="#fecdd3" strokeWidth="1.5" fill="none" />
+    <polygon points="175,40 185,55 165,55" stroke="#fecdd3" strokeWidth="1.5" fill="none" />
+    <circle cx="25" cy="150" r="5" stroke="#fecdd3" strokeWidth="1.5" fill="none" />
+    <polyline points="150,165 158,155 166,165 174,155" stroke="#fecdd3" strokeWidth="1.5" fill="none" />
+    <circle cx="35" cy="50" r="2.5" fill="#fecdd3" />
+  </svg>
+);
+
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+  </svg>
+);
 
 export default function AboutUs() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -192,7 +154,7 @@ export default function AboutUs() {
               Core tenets that drive our approach to every transformation engagement.
             </p>
           </div>
-          
+
           <div className="about-values__grid">
             {/* Value 1 */}
             <div className="about-value-card">
@@ -293,16 +255,23 @@ export default function AboutUs() {
               A diverse team of finance experts, technology architects, and data scientists dedicated to your transformation.
             </p>
           </div>
-          
+
           <div className="about-people__grid">
             {TEAM_MEMBERS.map((member) => (
-              <div key={member.name} className="about-people-card">
-                <div className="about-people-card__image-wrap">
-                  <img src={member.image} alt={member.name} className="about-people-card__img" />
+              <div key={member.name} className="about-people-card about-people-card--3d">
+                <div className="about-people-card__avatar-container">
+                  <div className="about-people-card__inner-circle"></div>
+                  <DecorativeRing />
+                  <img src={member.image} alt={member.name} className="about-people-card__avatar-img" style={member.imageStyle || {}} />
                 </div>
-                <div className="about-people-card__content">
+                <div className="about-people-card__info">
                   <h3 className="about-people-card__name">{member.name}</h3>
                   <span className="about-people-card__role">{member.role}</span>
+                  {member.linkedin && (
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="about-people-card__linkedin" aria-label={`${member.name} LinkedIn`}>
+                      <LinkedInIcon />
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
