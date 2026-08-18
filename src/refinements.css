@@ -1427,12 +1427,43 @@ span.brand__name--technologies,
   }
 }
 
-/* =========================================================
-   IMPLEMENTATION APPROACH TIMELINE STEPS RED TITLES
-   ========================================================= */
 .impl-serpentine__title,
 .impl-flow__title {
   color: #ff3333 !important;
+}
+
+/* =========================================================
+   CONSULTING HERO SECTION CONTAINER AND ALIGNMENT
+   ========================================================= */
+.picture-hero {
+  display: block !important;
+  min-height: 520px !important;
+  padding: 130px 0 40px !important;
+  background-color: #f1f5f9 !important;
+}
+
+.picture-hero__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.picture-hero__left {
+  flex: 1.2 !important;
+  padding: 40px 40px 40px 0 !important;
+}
+
+.picture-hero__right {
+  flex: 0.8 !important;
+  padding-right: 0 !important;
+  padding-left: 20px !important;
+}
+
+.picture-hero__img-mask {
+  height: 380px !important;
 }
 
 
