@@ -143,11 +143,14 @@ export default function Product() {
         <div className="prod-hero__container">
           <div className="prod-hero__top-row">
             <div className="prod-hero__left">
+              <div className="prod-hero__eyebrow-wrap">
+                <span className="prod-hero__eyebrow">TECHNOLOGY EXPERTISE</span>
+                <div className="prod-hero__eyebrow-line" />
+              </div>
               <h1 className="prod-hero__title">
-                Technology Expertise. <br />
-                Intelligent Solutions. <span className="prod-hero__title-blue">Stronger Finance.</span>
+                Intelligent Solutions. <br />
+                <span className="prod-hero__title-blue">Stronger Finance.</span>
               </h1>
-              <div className="prod-hero__title-line" />
               <p className="prod-hero__desc">
                 We help organizations leverage leading finance technologies to plan better, close faster, improve control and drive smarter decisions.
               </p>
