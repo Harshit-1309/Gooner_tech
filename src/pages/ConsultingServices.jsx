@@ -162,7 +162,7 @@ export default function ConsultingServices() {
           <div className="picture-hero__right">
             <div className="picture-hero__img-mask">
               <img
-                src="/assets/Consultingservices.png"
+                src="/assets/Consultingservices1.png"
                 alt="Finance Transformation Roadmap presentation"
                 className="picture-hero__img"
               />
