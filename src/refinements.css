@@ -1391,4 +1391,22 @@ span.brand__name--technologies,
   color: #ff3333 !important;
 }
 
+/* =========================================================
+   ABOUT US PAGE SECTIONS RED TITLES & BLUE SUBTITLES/EYEBROWS
+   ========================================================= */
+.about-intro__title,
+.about-values__main-title,
+.about-journey__title,
+.about-people__title {
+  color: #ff3333 !important;
+}
+
+.about-values__main-subtitle,
+.about-journey__subtitle,
+.about-people__subtitle,
+.about-hero__eyebrow,
+.about-mission-card__eyebrow {
+  color: #38bdf8 !important;
+}
+
 
