@@ -1561,4 +1561,23 @@ span.brand__name--technologies,
   color: #ffffff !important;
 }
 
+/* =========================================================
+   NAVBAR CONTACT US BUTTON BLUE BACKGROUND STYLE
+   ========================================================= */
+.app-container:has(.picture-hero) .navbar-header .nav-btn-contact,
+.app-container:has(.managed-hero) .navbar-header .nav-btn-contact,
+.app-container:has(.prod-hero) .navbar-header .nav-btn-contact {
+  background: var(--blue-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--blue-primary) !important;
+}
+
+.app-container:has(.picture-hero) .navbar-header .nav-btn-contact:hover,
+.app-container:has(.managed-hero) .navbar-header .nav-btn-contact:hover,
+.app-container:has(.prod-hero) .navbar-header .nav-btn-contact:hover {
+  background: #093985 !important;
+  border-color: #093985 !important;
+  color: #ffffff !important;
+}
+
 
