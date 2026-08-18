@@ -1438,11 +1438,13 @@ span.brand__name--technologies,
 .picture-hero {
   display: flex !important;
   min-height: 520px !important;
-  padding: 130px 0 40px !important;
   background-color: #f1f5f9 !important;
-  background-size: cover !important;
-  background-position: center right !important;
+  background-size: contain !important;
+  background-position: right bottom !important;
   background-repeat: no-repeat !important;
+  padding: 130px 0 40px !important;
+  position: relative !important;
+  align-items: center !important;
 }
 
 .picture-hero__container {
@@ -1450,12 +1452,7 @@ span.brand__name--technologies,
   margin: 0 auto;
   padding: 0 4% !important;
   display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.picture-hero__top-row {
-  display: flex;
+  align-items: center;
   width: 100%;
 }
 
@@ -1466,10 +1463,11 @@ span.brand__name--technologies,
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
 }
 
 .picture-hero__spacer {
-  flex: 0 0 45% !important;
+  flex: 1;
 }
 
 /* =========================================================
