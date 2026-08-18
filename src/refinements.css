@@ -1409,4 +1409,13 @@ span.brand__name--technologies,
   color: #38bdf8 !important;
 }
 
+/* =========================================================
+   SUBPAGES HERO BACKGROUND COLOR (GREY)
+   ========================================================= */
+.picture-hero,
+.managed-hero,
+.prod-hero {
+  background-color: #f1f5f9 !important;
+}
+
 
