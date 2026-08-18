@@ -1427,4 +1427,12 @@ span.brand__name--technologies,
   }
 }
 
+/* =========================================================
+   IMPLEMENTATION APPROACH TIMELINE STEPS RED TITLES
+   ========================================================= */
+.impl-serpentine__title,
+.impl-flow__title {
+  color: #ff3333 !important;
+}
+
 
