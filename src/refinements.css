@@ -1452,18 +1452,18 @@ span.brand__name--technologies,
 }
 
 .picture-hero__left {
-  flex: 1.2 !important;
-  padding: 40px 2% 40px 0 !important;
+  flex: 1 !important;
+  padding: 40px 4% 40px 0 !important;
 }
 
 .picture-hero__right {
-  flex: 0.8 !important;
+  flex: 1 !important;
   padding-right: 0 !important;
   padding-left: 20px !important;
 }
 
 .picture-hero__img-mask {
-  height: 450px !important;
+  height: 480px !important;
 }
 
 /* =========================================================
@@ -1511,12 +1511,12 @@ span.brand__name--technologies,
 }
 
 .managed-hero__left {
-  flex: 1.2 !important;
-  padding: 40px 2% 40px 0 !important;
+  flex: 1 !important;
+  padding: 40px 4% 40px 0 !important;
 }
 
 .managed-hero__right {
-  flex: 0.8 !important;
+  flex: 1 !important;
   padding-right: 0 !important;
   padding-left: 20px !important;
 }
@@ -1527,7 +1527,7 @@ span.brand__name--technologies,
 }
 
 .managed-hero__img-container {
-  height: 450px !important;
+  height: 480px !important;
 }
 
 
