@@ -145,8 +145,8 @@ export default function TestimonialsSection() {
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '100px', paddingBottom: '40px' }}>
-        <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', color: '#f8fafc', fontWeight: '800', marginBottom: '32px', letterSpacing: '-0.02em' }}>
-          Ready to transform your planning and reporting?
+        <h2 className="why-block-title cta-yellow-title" style={{ marginBottom: '32px' }}>
+          Ready to Transform Your Planning and Reporting?
         </h2>
         <Link to="/contact-us" className="testimonials-cta-btn" style={{ 
           display: 'inline-flex', 

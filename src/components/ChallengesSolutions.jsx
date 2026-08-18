@@ -1,4 +1,6 @@
 import { useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import challengesPhoto from '../assets/challenges_photo.jpg';
 
 const PAIRS_DATA = [
   {
@@ -179,6 +181,12 @@ export default function ChallengesSolutions() {
       id="challenges"
       className="challenges-solutions-section"
       aria-label="Business Challenges and How We Solve Them"
+      style={{
+        backgroundImage: `linear-gradient(rgba(6, 16, 34, 0.55), rgba(6, 16, 34, 0.65)), url(${challengesPhoto})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
     >
       {/* Background ambient lighting */}
       <div className="cs-ambient-glow cs-ambient-glow--left" aria-hidden="true" />
@@ -201,6 +209,11 @@ export default function ChallengesSolutions() {
               Modern finance leaders should spend less time managing spreadsheets and manual processes, and more time
               driving strategic growth. We eliminate operational bottlenecks through intelligent finance transformation.
             </p>
+            <div className="cs-header-action" style={{ marginTop: '24px' }}>
+              <Link to="/contact-us" className="cs-expert-btn">
+                Talk to our experts &rarr;
+              </Link>
+            </div>
           </div>
         </div>
 

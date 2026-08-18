@@ -4,7 +4,7 @@ import './TechnologiesOverview.css';
 const techExpertise = [
   {
     title: 'Planning & Budgeting',
-    color: '#0c4cb0',
+    color: '#38bdf8',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -25,7 +25,7 @@ const techExpertise = [
   },
   {
     title: 'Financial Consolidation & Close',
-    color: '#0c4cb0',
+    color: '#38bdf8',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 21h18M3 10h18M5 10v11M19 10v11M12 10v11M4 6l8-4 8 4M9 10v11M15 10v11" />
@@ -43,7 +43,7 @@ const techExpertise = [
   },
   {
     title: 'Account Reconciliations',
-    color: '#0c4cb0',
+    color: '#38bdf8',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -62,7 +62,7 @@ const techExpertise = [
   },
   {
     title: 'AI & Autonomous Finance',
-    color: '#0c4cb0',
+    color: '#38bdf8',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
@@ -87,17 +87,26 @@ export default function TechnologiesOverview() {
   return (
     <section className="tech-overview">
       <div className="tech-overview__container">
-        <div className="why-divider" aria-hidden="true" style={{ marginTop: '0', marginBottom: '40px' }}>
-          <div className="why-divider__center-node">
-            <span className="why-divider__label">CORE CAPABILITIES</span>
+        <div className="tech-overview__header-container">
+          <div className="tech-overview__header-spacer"></div>
+          <div className="tech-overview__header-center">
+            <div className="why-divider" aria-hidden="true" style={{ marginTop: '0', marginBottom: '40px' }}>
+              <div className="why-divider__center-node">
+                <span className="why-divider__label">CORE CAPABILITIES</span>
+              </div>
+            </div>
+            <div className="why-block-header why-block-header--centered" style={{ marginBottom: '0' }}>
+              <h2 className="why-block-title">Technologies</h2>
+              <p className="why-block-subtitle">
+                We help organizations leverage leading finance technologies to plan better, close faster, improve control and drive smarter decisions.
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div className="why-block-header why-block-header--centered" style={{ marginBottom: '64px' }}>
-          <h2 className="why-block-title">Technologies</h2>
-          <p className="why-block-subtitle">
-            We help organizations leverage leading finance technologies to plan better, close faster, improve control and drive smarter decisions.
-          </p>
+          <div className="tech-overview__header-right">
+            <Link to="/product" className="tech-overview__btn">
+              Explore more &rarr;
+            </Link>
+          </div>
         </div>
 
         <div className="tech-overview__grid">
@@ -117,12 +126,6 @@ export default function TechnologiesOverview() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="tech-overview__footer">
-          <Link to="/product" className="tech-overview__btn">
-            Explore more &rarr;
-          </Link>
         </div>
       </div>
     </section>

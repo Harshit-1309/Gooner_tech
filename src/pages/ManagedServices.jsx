@@ -142,133 +142,135 @@ export default function ManagedServices() {
 
       {/* Hero Section */}
       <section className="managed-hero">
-        <div className="managed-hero__left">
-          <div className="managed-hero__eyebrow-wrap">
-            <span className="managed-hero__eyebrow">MANAGED SERVICES</span>
-            <div className="managed-hero__eyebrow-line" />
-          </div>
-          <h1 className="managed-hero__title">
-            Reliable Support.<br />
-            Continuous Improvement.<br />
-            <span className="managed-hero__title-blue">Maximum Value from Your Finance Systems.</span>
-          </h1>
-          <p className="managed-hero__desc">
-            Gooner Technologies provides end-to-end managed services to keep your Oracle EPM and NetSuite environments running smoothly, securely, and aligned with your business.
-          </p>
-
-          {/* Symmetrical 4-point pill layout */}
-          <div className="managed-hero__grid-pills">
-            <div className="hero-pill">
-              <span className="hero-pill__icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </span>
-              <span className="hero-pill__text">Proactive Support</span>
+        <div className="managed-hero__container">
+          <div className="managed-hero__left">
+            <div className="managed-hero__eyebrow-wrap">
+              <span className="managed-hero__eyebrow">MANAGED SERVICES</span>
+              <div className="managed-hero__eyebrow-line" />
             </div>
-            <div className="hero-pill">
-              <span className="hero-pill__icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </span>
-              <span className="hero-pill__text">Improved Performance</span>
-            </div>
-            <div className="hero-pill">
-              <span className="hero-pill__icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                </svg>
-              </span>
-              <span className="hero-pill__text">Operational Excellence</span>
-            </div>
-            <div className="hero-pill">
-              <span className="hero-pill__icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </span>
-              <span className="hero-pill__text">Focus on What Matters</span>
-            </div>
-          </div>
-        </div>
+            <h1 className="managed-hero__title">
+              Reliable Support.<br />
+              Continuous Improvement.<br />
+              <span className="managed-hero__title-blue">Maximum Value from Your Finance Systems.</span>
+            </h1>
+            <p className="managed-hero__desc">
+              Gooner Technologies provides end-to-end managed services to keep your Oracle EPM and NetSuite environments running smoothly, securely, and aligned with your business.
+            </p>
 
-        {/* Right side Operations Room with benefits list overlay */}
-        <div className="managed-hero__right">
-          <div className="managed-hero__img-container">
-            <img
-              src={managedHeroImg}
-              alt="Operations control room dashboard monitoring"
-              className="managed-hero__img"
-            />
-            {/* Gradient Mask Overlay */}
-            <div className="managed-hero__img-overlay" />
-
-            {/* Partner logos inside the image container */}
-            <div className="managed-hero__logos">
-              <div className="logo-badge">
-                <span className="logo-badge__top">ORACLE</span>
-                <span className="logo-badge__bottom">Cloud EPM</span>
-              </div>
-              <div className="logo-divider" />
-              <div className="logo-badge">
-                <span className="logo-badge__top">ORACLE</span>
-                <span className="logo-badge__bottom">NetSuite</span>
-              </div>
-              <div className="logo-badge__cloud">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                </svg>
-              </div>
-            </div>
-
-            {/* Vertical list of key points */}
-            <div className="managed-hero__overlay-list">
-              <div className="overlay-point">
-                <div className="overlay-point__icon">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </div>
-                <div className="overlay-point__content">
-                  <h4 className="overlay-point__title">EXPERT SUPPORT</h4>
-                  <p className="overlay-point__desc">Experienced EPM & NetSuite specialists</p>
-                </div>
-              </div>
-
-              <div className="overlay-point">
-                <div className="overlay-point__icon">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            {/* Symmetrical 4-point pill layout */}
+            <div className="managed-hero__grid-pills">
+              <div className="hero-pill">
+                <span className="hero-pill__icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
-                </div>
-                <div className="overlay-point__content">
-                  <h4 className="overlay-point__title">PROACTIVE MONITORING</h4>
-                  <p className="overlay-point__desc">Detect, prevent and resolve issues early</p>
-                </div>
+                </span>
+                <span className="hero-pill__text">Proactive Support</span>
               </div>
-
-              <div className="overlay-point">
-                <div className="overlay-point__icon">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <div className="hero-pill">
+                <span className="hero-pill__icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
+                </span>
+                <span className="hero-pill__text">Improved Performance</span>
+              </div>
+              <div className="hero-pill">
+                <span className="hero-pill__icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  </svg>
+                </span>
+                <span className="hero-pill__text">Operational Excellence</span>
+              </div>
+              <div className="hero-pill">
+                <span className="hero-pill__icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                </span>
+                <span className="hero-pill__text">Focus on What Matters</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side Operations Room with benefits list overlay */}
+          <div className="managed-hero__right">
+            <div className="managed-hero__img-container">
+              <img
+                src={managedHeroImg}
+                alt="Operations control room dashboard monitoring"
+                className="managed-hero__img"
+              />
+              {/* Gradient Mask Overlay */}
+              <div className="managed-hero__img-overlay" />
+
+              {/* Partner logos inside the image container */}
+              <div className="managed-hero__logos">
+                <div className="logo-badge">
+                  <span className="logo-badge__top">ORACLE</span>
+                  <span className="logo-badge__bottom">Cloud EPM</span>
                 </div>
-                <div className="overlay-point__content">
-                  <h4 className="overlay-point__title">CONTINUOUS IMPROVEMENT</h4>
-                  <p className="overlay-point__desc">Optimize performance and drive more value</p>
+                <div className="logo-divider" />
+                <div className="logo-badge">
+                  <span className="logo-badge__top">ORACLE</span>
+                  <span className="logo-badge__bottom">NetSuite</span>
+                </div>
+                <div className="logo-badge__cloud">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                  </svg>
                 </div>
               </div>
 
-              <div className="overlay-point">
-                <div className="overlay-point__icon">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
+              {/* Vertical list of key points */}
+              <div className="managed-hero__overlay-list">
+                <div className="overlay-point">
+                  <div className="overlay-point__icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <div className="overlay-point__content">
+                    <h4 className="overlay-point__title">EXPERT SUPPORT</h4>
+                    <p className="overlay-point__desc">Experienced EPM & NetSuite specialists</p>
+                  </div>
                 </div>
-                <div className="overlay-point__content">
-                  <h4 className="overlay-point__title">SECURE & COMPLIANT</h4>
-                  <p className="overlay-point__desc">Keep your data safe and compliant</p>
+
+                <div className="overlay-point">
+                  <div className="overlay-point__icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div className="overlay-point__content">
+                    <h4 className="overlay-point__title">PROACTIVE MONITORING</h4>
+                    <p className="overlay-point__desc">Detect, prevent and resolve issues early</p>
+                  </div>
+                </div>
+
+                <div className="overlay-point">
+                  <div className="overlay-point__icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div className="overlay-point__content">
+                    <h4 className="overlay-point__title">CONTINUOUS IMPROVEMENT</h4>
+                    <p className="overlay-point__desc">Optimize performance and drive more value</p>
+                  </div>
+                </div>
+
+                <div className="overlay-point">
+                  <div className="overlay-point__icon">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </div>
+                  <div className="overlay-point__content">
+                    <h4 className="overlay-point__title">SECURE & COMPLIANT</h4>
+                    <p className="overlay-point__desc">Keep your data safe and compliant</p>
+                  </div>
                 </div>
               </div>
             </div>

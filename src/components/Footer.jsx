@@ -40,7 +40,10 @@ export default function Footer() {
             <a href="#" className="brand footer-brand" onClick={(e) => handleScrollTo(e, '#hero')}>
               <img src={goonerLogo} alt="Gooner Technologies" className="brand__logo-img" />
               <span className="brand__divider" aria-hidden="true" />
-              <span className="brand__name">Gooner Technologies</span>
+              <span className="brand__name">
+                <span className="brand__name--gooner">Gooner</span>{" "}
+                <span className="brand__name--technologies">Technologies</span>
+              </span>
             </a>
             <p className="footer__mission">
               Empowering global organizations with intelligent financial planning, multi-entity consolidation, and autonomous AI-driven automation.

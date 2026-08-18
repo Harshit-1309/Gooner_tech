@@ -73,7 +73,10 @@ export default function Navbar({ links }) {
               className="brand__logo-img"
             />
             <span className="brand__divider" aria-hidden="true" />
-            <span className="brand__name">Gooner Technologies</span>
+            <span className="brand__name">
+              <span className="brand__name--gooner">Gooner</span>{" "}
+              <span className="brand__name--technologies">Technologies</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}

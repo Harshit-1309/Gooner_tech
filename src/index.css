@@ -1169,7 +1169,6 @@ body {
 .challenges-solutions-section {
   position: relative;
   width: 100%;
-  background: var(--bg-dark);
   padding: 100px 2rem 120px;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -8400,17 +8399,17 @@ body {
 }
 
 .about-people__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-people-card {
-  width: calc(33.333% - 20px);
-  min-width: 280px;
-  max-width: 380px;
+  width: 100%;
   background: linear-gradient(135deg, #0d1e3d 0%, #061022 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;

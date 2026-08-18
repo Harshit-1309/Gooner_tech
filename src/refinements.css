@@ -467,7 +467,7 @@
   min-width: 160px !important;
 }
 .marquee-track {
-  gap: 16px !important;
+  gap: 0 !important;
 }
 .navbar-header {
   z-index: 9999 !important;
@@ -483,47 +483,99 @@
 }
 /* Adjust section padding to allow perfect width matching without scrollbar issues */
 .trusted-by-section {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding: 60px 2rem !important;
 }
 .trusted-by-header {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-@media (max-width: 768px) {
-  .trusted-by-header {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+.trusted-by__title,
+.why-block-title,
+.testi-title,
+.sticky-main-title {
+  font-family: var(--font-main) !important;
+  font-size: 1.9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.25 !important;
+  color: #ff3333 !important;
+}
+.trusted-by__subtitle,
+.why-block-subtitle,
+.testi-subtitle,
+.sticky-main-desc {
+  font-family: var(--font-main) !important;
+  font-size: 1.2rem !important;
+  color: #38bdf8 !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
+}
+.trusted-by__title,
+.why-block-title,
+.testi-title {
+  margin-bottom: 12px !important;
+}
+.trusted-by__subtitle,
+.why-block-subtitle,
+.testi-subtitle {
+  max-width: 720px !important;
+  margin: 0 auto !important;
 }
 
 .marquee-container {
   background: transparent !important;
   padding: 24px 0 !important;
-  width: 100% !important;
+  width: calc(100% + 4rem) !important;
   max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
+  margin-left: -2rem !important;
+  margin-right: -2rem !important;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent) !important;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent) !important;
 }
 .marquee-row {
+  background: transparent !important;
+  margin-bottom: 24px !important;
+  overflow: visible !important;
+  width: 100% !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 10px 0 !important;
+}
+.logo-card {
+  position: relative !important;
+  width: 200px !important;
+  min-width: 200px !important;
+  height: 80px !important;
+  border-radius: 12px !important;
   background: #ffffff !important;
-  margin-bottom: 16px;
-  border-radius: 50px !important;
-  overflow: hidden !important;
-  margin-left: 24px !important;
-  margin-right: 24px !important;
-  width: calc(100% - 48px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 24px !important;
+  margin: 0 8px !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+.logo-card:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+  z-index: 5 !important;
 }
 .logo-card img {
   transform: scale(1) !important;
-  mix-blend-mode: multiply;
+  mix-blend-mode: multiply !important;
   filter: none !important;
   opacity: 1 !important;
-  max-width: 140px !important;
-  max-height: 45px !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   object-fit: contain !important;
+  transition: transform 0.25s ease !important;
+}
+.logo-card:hover img {
+  transform: scale(1.05) !important;
 }
 
 /* Enlarge specifically small logos */
@@ -531,7 +583,13 @@ img[alt="Frog Bikes Logo"],
 img[alt="Troy Group Logo"],
 img[alt="Showpad Logo"],
 img[alt="White Stores Logo"] {
-  transform: scale(1.9) !important;
+  transform: scale(1.5) !important;
+}
+img[alt="Frog Bikes Logo"]:hover,
+img[alt="Troy Group Logo"]:hover,
+img[alt="Showpad Logo"]:hover,
+img[alt="White Stores Logo"]:hover {
+  transform: scale(1.6) !important;
 }
 
 .challenges-solutions-section {
@@ -685,12 +743,21 @@ img[alt="White Stores Logo"] {
   background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%) !important;
 }
 
+.why-gooner-section,
+.pbi-section,
+.challenges-solutions-section,
+.tech-overview,
+.casestudy-section,
+.testimonials-section {
+  padding: 60px 2rem !important;
+}
+
 .pbi-seamless-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1240px;
   margin: 40px auto 0 auto;
   background: radial-gradient(circle at 50% 50%, rgba(56, 142, 255, 0.08) 0%, transparent 65%);
   border: 1px solid rgba(255, 255, 255, 0.04);
@@ -732,8 +799,8 @@ img[alt="White Stores Logo"] {
   background: #0a0a0a;
   z-index: 10;
   transform: scale(1.04);
-  box-shadow: 0 0 50px 15px rgba(255, 120, 0, 0.4);
-  border-radius: 2px;
+  box-shadow: 0 0 40px 10px rgba(56, 142, 255, 0.25) !important;
+  border-radius: 8px !important;
 }
 
 @media (max-width: 1024px) {
@@ -784,12 +851,16 @@ img[alt="White Stores Logo"] {
 .why-divider__center-node,
 .story-eyebrow,
 .testi-eyebrow {
-  color: var(--blue-primary) !important;
+  color: #ffffff !important;
   background: rgba(56, 142, 255, 0.1) !important;
   border-color: rgba(56, 142, 255, 0.28) !important;
   box-shadow: none !important;
-  font-size: 1.2rem !important;
-  padding: 12px 32px !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  padding: 8px 18px !important;
+  border-radius: 100px !important;
+  text-transform: uppercase !important;
 }
 
 .why-divider__dot {
@@ -980,7 +1051,7 @@ section,
   margin: 0 auto;
   gap: 120px;
   align-items: flex-start;
-  padding: 80px 20px;
+  padding: 40px 20px 20px 20px;
   position: relative;
 }
 
@@ -1005,17 +1076,11 @@ section,
 }
 
 .sticky-main-title {
-  font-size: 1.45rem !important;
-  line-height: 1.1 !important;
   text-align: left !important;
-  color: white !important;
   margin-bottom: 0 !important;
 }
 
 .sticky-main-desc {
-  font-size: 1.1rem !important;
-  line-height: 1.6 !important;
-  color: rgba(255,255,255,0.7) !important;
   text-align: left !important;
   margin-top: 10px !important;
 }
@@ -1124,3 +1189,395 @@ section,
     padding-bottom: 0;
   }
 }
+
+.cs-expert-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border-radius: 50px;
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-expert-btn:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 15px 35px -5px rgba(56, 189, 248, 0.5);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   UNIFIED PAGE CONTAINER WIDTHS & ALIGNMENTS
+   ========================================================= */
+.trusted-by__container,
+.cs-container,
+.tech-overview__container,
+.why-container,
+.casestudy-container,
+.testi-container,
+.sticky-layout-container {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+
+.footer {
+  padding-left: 64px !important;
+  padding-right: 64px !important;
+}
+.footer__container {
+  max-width: 1320px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+@media (max-width: 1024px) {
+  .footer {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+  .footer__container {
+    max-width: none !important;
+  }
+}
+
+/* =========================================================
+   UNIFIED BODY/QUOTE TYPOGRAPHY SIZES
+   ========================================================= */
+.casestudy-block-text,
+.casestudy-outcome-list li,
+.testi-quote-text {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+.casestudy-title {
+  font-family: var(--font-main) !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.cta-yellow-title {
+  color: #ff3333 !important;
+}
+
+.t-line1 {
+  background: none !important;
+  -webkit-text-fill-color: #ff3333 !important;
+  color: #ff3333 !important;
+}
+
+/* =========================================================
+   GOLDEN YELLOW CTA BUTTONS
+   ========================================================= */
+.t-cta--primary,
+.nav-btn-contact,
+.cs-expert-btn,
+.sticky-btn--primary,
+.testimonials-cta-btn {
+  background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%) !important;
+  color: #04060d !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 10px 25px -5px rgba(255, 170, 0, 0.4) !important;
+}
+
+.t-cta--primary:hover,
+.nav-btn-contact:hover,
+.cs-expert-btn:hover,
+.sticky-btn--primary:hover,
+.testimonials-cta-btn:hover {
+  background: linear-gradient(135deg, #ffe033 0%, #ffbb00 100%) !important;
+  color: #000000 !important;
+  box-shadow: 0 12px 30px -5px rgba(255, 170, 0, 0.55) !important;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   NAVBAR/FOOTER BRAND LOGO TEXT COLORING
+   ========================================================= */
+.brand__name--gooner,
+span.brand__name--gooner,
+.brand span.brand__name--gooner,
+.navbar-header .brand span.brand__name--gooner,
+.app-container .navbar-header .brand span.brand__name--gooner,
+.app-container--about .navbar-header .brand span.brand__name--gooner,
+.faqs-page .navbar-header .brand span.brand__name--gooner,
+.contact-hero .navbar-header .brand span.brand__name--gooner,
+.app-container:has(.prod-hero) .navbar-header .brand span.brand__name--gooner,
+.app-container:has(.managed-hero) .navbar-header .brand span.brand__name--gooner,
+.app-container:has(.picture-hero) .navbar-header .brand span.brand__name--gooner {
+  color: #ff3333 !important;
+}
+
+.brand__name--technologies,
+span.brand__name--technologies,
+.brand span.brand__name--technologies,
+.navbar-header .brand span.brand__name--technologies,
+.app-container .navbar-header .brand span.brand__name--technologies,
+.app-container--about .navbar-header .brand span.brand__name--technologies,
+.faqs-page .navbar-header .brand span.brand__name--technologies,
+.contact-hero .navbar-header .brand span.brand__name--technologies,
+.app-container:has(.prod-hero) .navbar-header .brand span.brand__name--technologies,
+.app-container:has(.managed-hero) .navbar-header .brand span.brand__name--technologies,
+.app-container:has(.picture-hero) .navbar-header .brand span.brand__name--technologies {
+  color: #0c4cb0 !important;
+}
+
+.t-subline {
+  font-size: clamp(1.2rem, 3.3vw, 1.58rem) !important;
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+/* =========================================================
+   CASE STUDIES & TESTIMONIALS NAVY BLUE FONT COLORING
+   ========================================================= */
+.casestudy-title,
+.casestudy-block-title,
+.testi-quote-text,
+.testi-client-name {
+  color: #0b1325 !important; /* Rich deep navy blue for titles and quotes */
+}
+
+.casestudy-subtitle,
+.casestudy-block-text,
+.casestudy-outcome-list li,
+.casestudy-quote-text,
+.testi-client-role,
+.testi-client-company {
+  color: #1e3a8a !important; /* Deep navy blue for description copy */
+}
+
+/* =========================================================
+   FOOTER NAVIGATION TITLE VERTICAL ALIGNMENT
+   ========================================================= */
+.footer__nav-title {
+  margin-top: 8px !important;
+}
+
+/* =========================================================
+   PRODUCT PAGE HERO TITLE RED TEXT
+   ========================================================= */
+.prod-hero__title {
+  color: #ff3333 !important;
+}
+
+/* =========================================================
+   CONSULTING PAGE HERO TITLE RED TEXT
+   ========================================================= */
+.picture-hero__title {
+  color: #ff3333 !important;
+}
+
+/* =========================================================
+   ADDITIONAL SUBPAGES HERO TITLES RED TEXT
+   ========================================================= */
+.impl-hero__title,
+.managed-hero__title,
+.about-hero__title {
+  color: #ff3333 !important;
+}
+
+/* =========================================================
+   ABOUT US PAGE SECTIONS RED TITLES & BLUE SUBTITLES/EYEBROWS
+   ========================================================= */
+.about-intro__title,
+.about-values__main-title,
+.about-journey__title,
+.about-people__title {
+  color: #ff3333 !important;
+}
+
+.about-values__main-subtitle,
+.about-journey__subtitle,
+.about-people__subtitle,
+.about-hero__eyebrow,
+.about-mission-card__eyebrow {
+  color: #38bdf8 !important;
+}
+
+/* =========================================================
+   SUBPAGES HERO BACKGROUND COLOR (GREY)
+   ========================================================= */
+.picture-hero,
+.managed-hero,
+.prod-hero {
+  background-color: #f1f5f9 !important;
+}
+
+/* =========================================================
+   FOOTER COLUMN EQUAL WIDTH ALIGNMENT
+   ========================================================= */
+@media (min-width: 992px) {
+  .footer__main-grid {
+    grid-template-columns: 1.2fr 0.8fr 1.2fr 0.8fr !important;
+  }
+}
+
+.impl-serpentine__title,
+.impl-flow__title {
+  color: #ff3333 !important;
+}
+
+/* =========================================================
+   CONSULTING HERO SECTION CONTAINER AND ALIGNMENT
+   ========================================================= */
+.picture-hero {
+  display: flex !important;
+  min-height: 520px !important;
+  padding: 130px 0 40px !important;
+  background-color: #f1f5f9 !important;
+  position: relative !important;
+  align-items: center !important;
+}
+
+.picture-hero__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4% !important;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.picture-hero__left {
+  flex: 1 !important;
+  padding: 40px 4% 40px 0 !important;
+}
+
+.picture-hero__right {
+  flex: 1 !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  align-self: stretch !important;
+  padding-right: 0 !important;
+}
+
+.picture-hero__img-mask {
+  width: 100% !important;
+  height: 480px !important;
+  overflow: hidden !important;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%) !important;
+  background: #f1f5f9 !important;
+}
+
+.picture-hero__img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* =========================================================
+   TECHNOLOGIES HERO EYEBROW BADGE STYLES
+   ========================================================= */
+.prod-hero__eyebrow-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.prod-hero__eyebrow {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #0c4cb0;
+}
+
+.prod-hero__eyebrow-line {
+  width: 48px;
+  height: 3px;
+  background-color: #0c4cb0;
+  margin-top: 6px;
+}
+
+/* =========================================================
+   MANAGED SERVICES HERO CONTAINER AND ALIGNMENT
+   ========================================================= */
+.managed-hero {
+  display: block !important;
+  min-height: 520px !important;
+  padding: 130px 0 40px !important;
+  background-color: #f1f5f9 !important;
+}
+
+.managed-hero__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4% !important;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.managed-hero__left {
+  flex: 1 !important;
+  padding: 40px 4% 40px 0 !important;
+}
+
+.managed-hero__right {
+  flex: 1 !important;
+  padding-right: 0 !important;
+  padding-left: 20px !important;
+}
+
+.managed-hero__title {
+  font-size: clamp(2rem, 3.8vw, 3.4rem) !important;
+  line-height: 1.2 !important;
+}
+
+.managed-hero__img-container {
+  height: 480px !important;
+}
+
+/* =========================================================
+   ABOUT US MISSION AND VISION GOLDEN YELLOW STYLES
+   ========================================================= */
+.about-mission-card__title {
+  color: #fbbf24 !important;
+}
+
+.about-mission-card__bullets li,
+.about-mission-card__text {
+  color: #ffffff !important;
+}
+
+.about-mission-card__bullets li .bullet-arrow {
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   NAVBAR CONTACT US BUTTON BLUE BACKGROUND STYLE
+   ========================================================= */
+.app-container:has(.picture-hero) .navbar-header .nav-btn-contact,
+.app-container:has(.managed-hero) .navbar-header .nav-btn-contact,
+.app-container:has(.prod-hero) .navbar-header .nav-btn-contact {
+  background: var(--blue-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--blue-primary) !important;
+}
+
+.app-container:has(.picture-hero) .navbar-header .nav-btn-contact:hover,
+.app-container:has(.managed-hero) .navbar-header .nav-btn-contact:hover,
+.app-container:has(.prod-hero) .navbar-header .nav-btn-contact:hover {
+  background: #093985 !important;
+  border-color: #093985 !important;
+  color: #ffffff !important;
+}
+
+

@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import consultingHero from '../assets/consulting_hero.png';
 
 const CONSULTING_CARDS = [
   {
@@ -145,27 +144,29 @@ export default function ConsultingServices() {
 
       {/* Picture-perfect Hero Section */}
       <section className="picture-hero">
-        <div className="picture-hero__left">
-          <div className="picture-hero__eyebrow-wrap">
-            <span className="picture-hero__eyebrow">CONSULTING SERVICES</span>
-            <div className="picture-hero__eyebrow-line" />
+        <div className="picture-hero__container">
+          <div className="picture-hero__left">
+            <div className="picture-hero__eyebrow-wrap">
+              <span className="picture-hero__eyebrow">CONSULTING SERVICES</span>
+              <div className="picture-hero__eyebrow-line" />
+            </div>
+            <h1 className="picture-hero__title">
+              Strategic Guidance.<br />
+              Smarter Finance.<br />
+              <span className="picture-hero__title-blue">Stronger Business Outcomes.</span>
+            </h1>
+            <p className="picture-hero__desc">
+              Gooner Technologies helps finance teams transform complex challenges into scalable, technology-driven solutions. Our consultants combine finance expertise with deep experience in Oracle EPM, NetSuite, automation, integrations, and AI to deliver measurable results.
+            </p>
           </div>
-          <h1 className="picture-hero__title">
-            Strategic Guidance.<br />
-            Smarter Finance.<br />
-            <span className="picture-hero__title-blue">Stronger Business Outcomes.</span>
-          </h1>
-          <p className="picture-hero__desc">
-            Gooner Technologies helps finance teams transform complex challenges into scalable, technology-driven solutions. Our consultants combine finance expertise with deep experience in Oracle EPM, NetSuite, automation, integrations, and AI to deliver measurable results.
-          </p>
-        </div>
-        <div className="picture-hero__right">
-          <div className="picture-hero__img-mask">
-            <img
-              src={consultingHero}
-              alt="Finance Transformation Roadmap presentation"
-              className="picture-hero__img"
-            />
+          <div className="picture-hero__right">
+            <div className="picture-hero__img-mask">
+              <img
+                src="/assets/Consultingservices1.png"
+                alt="Finance Transformation Roadmap presentation"
+                className="picture-hero__img"
+              />
+            </div>
           </div>
         </div>
       </section>
