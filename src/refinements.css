@@ -1382,4 +1382,13 @@ span.brand__name--technologies,
   color: #ff3333 !important;
 }
 
+/* =========================================================
+   ADDITIONAL SUBPAGES HERO TITLES RED TEXT
+   ========================================================= */
+.impl-hero__title,
+.managed-hero__title,
+.about-hero__title {
+  color: #ff3333 !important;
+}
+
 
