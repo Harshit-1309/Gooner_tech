@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function HeroContent({
   text = 'We build intelligent finance systems',
-  subtitle = 'Using Enterprise Performance Management (EPM), Business Intelligence (BI), and Artificial Intelligence (AI), we help organizations automate budgeting, forecasting, consolidation, account reconciliations, reporting, and analytics, enabling finance teams to spend more time making business decisions and less time preparing spreadsheets.',
+  subtitle = 'Automate finance. Accelerate decisions with EPM, BI & AI',
   primaryCtaText = 'Request a Demo',
   primaryCtaHref = '/contact-us',
   secondaryCtaText = 'Explore Solutions',
@@ -11,12 +11,16 @@ export default function HeroContent({
 }) {
   const [displayedText, setDisplayedText] = useState('');
   const [isDone, setIsDone] = useState(false);
+  const [displayedSubtitle, setDisplayedSubtitle] = useState('');
+  const [isSubDone, setIsSubDone] = useState(false);
 
   useEffect(() => {
     const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (noMotion) {
       setDisplayedText(text);
       setIsDone(true);
+      setDisplayedSubtitle(subtitle);
+      setIsSubDone(true);
       return;
     }
 
@@ -39,6 +43,36 @@ export default function HeroContent({
 
     return () => clearTimeout(timeout);
   }, [text]);
+
+  useEffect(() => {
+    if (!isDone) return;
+
+    const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (noMotion) {
+      setDisplayedSubtitle(subtitle);
+      setIsSubDone(true);
+      return;
+    }
+
+    let j = 0;
+    const charDelay = 24; // snappier for subtitle
+    const startDelay = 200; // start shortly after first line finishes
+
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        j++;
+        setDisplayedSubtitle(subtitle.slice(0, j));
+        if (j >= subtitle.length) {
+          clearInterval(interval);
+          setIsSubDone(true);
+        }
+      }, charDelay);
+
+      return () => clearInterval(interval);
+    }, startDelay);
+
+    return () => clearTimeout(timeout);
+  }, [isDone, subtitle]);
 
   const handleSmoothScroll = (e, href) => {
     if (href.startsWith('#')) {
@@ -64,8 +98,13 @@ export default function HeroContent({
       {/* Glowing Neon Divider Underline */}
       <div className="t-divider" aria-hidden="true" />
 
-      {/* Subtitle Description */}
-      <p className="t-subline">{subtitle}</p>
+      {/* Subtitle Description with Typewriter animation & caret */}
+      <p className="t-subline">
+        <span className="t-subline__text">{displayedSubtitle}</span>
+        {isDone && (
+          <span className={`t-line1__cursor ${isSubDone ? 'is-done' : ''}`} aria-hidden="true" style={{ height: '0.88em', marginLeft: '4px' }} />
+        )}
+      </p>
 
       {/* Centered CTA Button Group */}
       <div className="t-cta-group">

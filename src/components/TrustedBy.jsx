@@ -121,6 +121,11 @@ export default function TrustedBy() {
       <div className="trusted-by__container">
         {/* Header Block */}
         <div className={`trusted-by__header ${isVisible ? 'is-visible' : ''}`}>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginBottom: '24px' }}>
+            <div className="why-divider__center-node">
+              <span>BRANDS WHO TRUSTED US</span>
+            </div>
+          </div>
           <h2 className="trusted-by__title">Trusted by Leading Organizations</h2>
           <p className="trusted-by__subtitle">
             We&apos;ve partnered with organizations across manufacturing, healthcare, retail, SaaS, logistics, and

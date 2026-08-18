@@ -63,9 +63,41 @@
   }
 }
 
-.tech-overview__footer {
+.tech-overview__header-container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  align-items: flex-end;
+  margin-bottom: 56px;
+  width: 100%;
+}
+
+.tech-overview__header-spacer {
+  /* Empty spacer to balance the grid and keep the center block exactly centered */
+}
+
+.tech-overview__header-center {
+  text-align: center;
+}
+
+.tech-overview__header-right {
   text-align: right;
-  margin-top: 16px; /* give a little bit of breathing room if needed, though grid has margin-bottom: 64px */
+  margin-bottom: 30px; /* visually aligns the button vertically with the title block */
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .tech-overview__header-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .tech-overview__header-spacer {
+    display: none;
+  }
+  .tech-overview__header-right {
+    text-align: center;
+    margin-bottom: 0;
+  }
 }
 
 .tech-overview__btn {

@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import challengesPhoto from '../assets/challenges_photo.jpg';
 
 const PAIRS_DATA = [
@@ -208,6 +209,11 @@ export default function ChallengesSolutions() {
               Modern finance leaders should spend less time managing spreadsheets and manual processes, and more time
               driving strategic growth. We eliminate operational bottlenecks through intelligent finance transformation.
             </p>
+            <div className="cs-header-action" style={{ marginTop: '24px' }}>
+              <Link to="/contact-us" className="cs-expert-btn">
+                Talk to our experts &rarr;
+              </Link>
+            </div>
           </div>
         </div>
 
