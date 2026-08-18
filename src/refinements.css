@@ -1436,10 +1436,13 @@ span.brand__name--technologies,
    CONSULTING HERO SECTION CONTAINER AND ALIGNMENT
    ========================================================= */
 .picture-hero {
-  display: block !important;
+  display: flex !important;
   min-height: 520px !important;
   padding: 130px 0 40px !important;
   background-color: #f1f5f9 !important;
+  background-size: cover !important;
+  background-position: center right !important;
+  background-repeat: no-repeat !important;
 }
 
 .picture-hero__container {
@@ -1447,23 +1450,26 @@ span.brand__name--technologies,
   margin: 0 auto;
   padding: 0 4% !important;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.picture-hero__top-row {
+  display: flex;
   width: 100%;
 }
 
 .picture-hero__left {
-  flex: 1 !important;
-  padding: 40px 4% 40px 0 !important;
+  flex: 0 0 55% !important;
+  max-width: 55% !important;
+  padding: 20px 2% 20px 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.picture-hero__right {
-  flex: 1 !important;
-  padding-right: 0 !important;
-  padding-left: 20px !important;
-}
-
-.picture-hero__img-mask {
-  height: 480px !important;
+.picture-hero__spacer {
+  flex: 0 0 45% !important;
 }
 
 /* =========================================================
