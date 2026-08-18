@@ -1368,4 +1368,11 @@ span.brand__name--technologies,
   margin-top: 8px !important;
 }
 
+/* =========================================================
+   PRODUCT PAGE HERO TITLE RED TEXT
+   ========================================================= */
+.prod-hero__title {
+  color: #ff3333 !important;
+}
+
 
