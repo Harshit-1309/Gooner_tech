@@ -1375,4 +1375,11 @@ span.brand__name--technologies,
   color: #ff3333 !important;
 }
 
+/* =========================================================
+   CONSULTING PAGE HERO TITLE RED TEXT
+   ========================================================= */
+.picture-hero__title {
+  color: #ff3333 !important;
+}
+
 
