@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const TESTIMONIALS = [
@@ -36,6 +36,7 @@ const TESTIMONIALS = [
 
 export default function TestimonialsSection() {
   const scrollRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -43,6 +44,27 @@ export default function TestimonialsSection() {
       // Scroll by 1 card width roughly, or full container width
       const scrollAmount = direction === 'left' ? -(clientWidth / 2) : (clientWidth / 2);
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const scrollToIndex = (index) => {
+    if (!scrollRef.current) return;
+    const cardNodes = scrollRef.current.children;
+    if (cardNodes[index]) {
+      cardNodes[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  };
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const firstChild = scrollRef.current.firstChild;
+    if (firstChild) {
+      const cardWidth = firstChild.offsetWidth;
+      // Only update if cardWidth is valid
+      if (cardWidth > 0) {
+        const index = Math.round(scrollRef.current.scrollLeft / cardWidth);
+        setActiveIndex(index);
+      }
     }
   };
 
@@ -87,11 +109,11 @@ export default function TestimonialsSection() {
               </svg>
             </button>
 
-            <div className="testi-grid" ref={scrollRef}>
-              {TESTIMONIALS.map((item) => (
+            <div className="testi-grid" ref={scrollRef} onScroll={handleScroll}>
+              {TESTIMONIALS.map((item, index) => (
                 <div
                   key={item.id}
-                  className="testi-card"
+                  className={`testi-card ${activeIndex === index ? 'is-active-card' : ''}`}
                   onMouseMove={handleCardMouseMove}
                 >
                   <div className="testi-card__spotlight" aria-hidden="true" />
@@ -140,6 +162,18 @@ export default function TestimonialsSection() {
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </button>
+          </div>
+
+          {/* Dots Pagination */}
+          <div className="testi-pagination">
+            {TESTIMONIALS.map((_, index) => (
+              <button
+                key={index}
+                className={`testi-dot ${activeIndex === index ? 'is-active' : ''}`}
+                onClick={() => scrollToIndex(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
