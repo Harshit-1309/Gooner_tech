@@ -1581,3 +1581,130 @@ span.brand__name--technologies,
 }
 
 
+
+/* =========================================================
+   COMPREHENSIVE MOBILE RESPONSIVE FIXES FOR ALL HEROES
+   ========================================================= */
+@media (max-width: 1024px) {
+  /* Make all hero containers stack vertically */
+  .picture-hero__container,
+  .impl-hero__container,
+  .managed-hero__container,
+  .about-hero__container {
+    flex-direction: column !important;
+    padding: 0 5% !important;
+  }
+  
+  /* Reset widths for left and right columns to take full width */
+  .picture-hero__left,
+  .picture-hero__right,
+  .impl-hero__left,
+  .impl-hero__right,
+  .impl-hero__spacer,
+  .managed-hero__left,
+  .managed-hero__right,
+  .about-hero__left,
+  .about-hero__spacer {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Reset backgrounds and overlaps for mobile layout */
+  .about-hero__left {
+    background: rgba(13, 30, 61, 0.85) !important;
+    padding: 30px 6% !important;
+    margin-top: 40px !important;
+  }
+  
+  .impl-hero__left {
+    padding: 30px 6% !important;
+    margin-top: 40px !important;
+    background: rgba(13, 30, 61, 0.85) !important;
+    border-radius: 16px !important;
+  }
+
+  /* Fix specific heights for images so they aren't cut off */
+  .picture-hero__right,
+  .managed-hero__right {
+    height: auto !important;
+    min-height: 250px !important;
+    margin-top: 40px !important;
+    padding: 0 !important;
+  }
+  
+  .picture-hero__img-mask,
+  .managed-hero__img-container {
+    height: auto !important;
+    width: 100% !important;
+    clip-path: none !important;
+  }
+  
+  .picture-hero__img,
+  .managed-hero__img {
+    height: auto !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+  }
+
+  .managed-hero__img-overlay {
+    border-radius: 16px !important;
+  }
+  
+  /* Managed Services Specific Overlays */
+  .managed-hero__overlay-list {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    background: rgba(13, 30, 61, 0.95) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    margin-top: 16px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* =========================================================
+   MOBILE FIXES FOR IMPLEMENTATION APPROACH CARD
+   ========================================================= */
+@media (max-width: 768px) {
+  .impl-card__header {
+    font-size: 0.85rem !important;
+    padding: 16px 12px !important;
+    letter-spacing: 0.05em !important;
+  }
+  
+  .impl-card__body {
+    padding: 24px 16px !important;
+  }
+  
+  .impl-flow__step {
+    gap: 16px !important;
+    align-items: flex-start !important;
+  }
+  
+  .impl-flow__icon-wrap {
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: 4px !important;
+  }
+  
+  .impl-flow__details {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  
+  .impl-flow__desc {
+    max-width: 100% !important;
+    font-size: 0.82rem !important;
+  }
+}

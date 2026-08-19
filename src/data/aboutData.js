@@ -14,8 +14,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Andy Pieroux',
     role: 'Mentor',
-    image: '/assets/Our%20people/Andy_Pieroux.png',
-    imageStyle: { padding: '20px 20px 0 20px' }
+    image: '/assets/Our%20people/Andy_Pieroux.png'
   },
   {
     name: 'Vinay Parekh',
@@ -39,8 +38,7 @@ export const TEAM_MEMBERS = [
     name: 'Harshit Singh',
     role: 'Consultant',
     image: '/assets/Our%20people/Harshit_Singh.png',
-    linkedin: 'https://www.linkedin.com/in/hrshit1309/',
-    imageStyle: { padding: '20px 20px 0 20px', top: '25px' }
+    linkedin: 'https://www.linkedin.com/in/hrshit1309/'
   }
 ];
 

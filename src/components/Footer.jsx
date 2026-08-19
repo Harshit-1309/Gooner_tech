@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import goonerLogo from '../assets/logo.png';
 
 export default function Footer() {
   const [newsEmail, setNewsEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [isSubscribing, setIsSubscribing] = useState(false);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -20,12 +23,30 @@ export default function Footer() {
   };
 
   const handleScrollTo = (e, href) => {
-    if (href.startsWith('#')) {
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    e.preventDefault();
+    if (href.includes('#')) {
+      const [path, hash] = href.split('#');
+      const targetId = `#${hash}`;
+
+      const scrollToTarget = () => {
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+      const resolvedPath = path || '/';
+      const isSamePath = location.pathname === resolvedPath || 
+        (resolvedPath === '/' && location.pathname === '');
+
+      if (!isSamePath) {
+        navigate(resolvedPath);
+        setTimeout(scrollToTarget, 150);
+      } else {
+        scrollToTarget();
       }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -37,7 +58,7 @@ export default function Footer() {
         <div className="footer__main-grid">
           {/* Col 1: Brand */}
           <div className="footer__brand-col">
-            <a href="#" className="brand footer-brand" onClick={(e) => handleScrollTo(e, '#hero')}>
+            <a href="/#hero" className="brand footer-brand" onClick={(e) => handleScrollTo(e, '/#hero')}>
               <img src={goonerLogo} alt="Gooner Technologies" className="brand__logo-img" />
               <span className="brand__divider" aria-hidden="true" />
               <span className="brand__name">
@@ -54,9 +75,9 @@ export default function Footer() {
           <div className="footer__nav-col">
             <h4 className="footer__nav-title">Quick Links</h4>
             <ul className="footer__nav-list">
-              <li><a href="#why-us" onClick={(e) => handleScrollTo(e, '#why-us')}>Why Choose Us</a></li>
-              <li><a href="#proven-impact" onClick={(e) => handleScrollTo(e, '#proven-impact')}>Business Impact</a></li>
-              <li><a href="#case-studies" onClick={(e) => handleScrollTo(e, '#case-studies')}>Client Case Studies</a></li>
+              <li><a href="/#why-us" onClick={(e) => handleScrollTo(e, '/#why-us')}>Why Choose Us</a></li>
+              <li><a href="/#proven-impact" onClick={(e) => handleScrollTo(e, '/#proven-impact')}>Business Impact</a></li>
+              <li><a href="/#case-studies" onClick={(e) => handleScrollTo(e, '/#case-studies')}>Client Case Studies</a></li>
               <li><Link to="/about-us">About Us</Link></li>
               <li><Link to="/faqs">FAQs</Link></li>
             </ul>

@@ -227,6 +227,7 @@
 
 .form-group input,
 .form-group textarea {
+  width: 100%;
   background: #ffffff;
   border: 1px solid #bae6fd;
   border-radius: 12px;
